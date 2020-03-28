@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>site on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/tags/site/</link>
+    <description>Recent content in site on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 17:49:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/tags/site/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
+      <link>https://gblog.shaloc.site/post/hsts/</link>
+      <pubDate>Fri, 20 Mar 2020 17:49:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/hsts/</guid>
+      <description>&lt;p&gt;前一段时间由于对运营商劫持状况的担忧，我把所有子站都加上了https，包括用来做任意错误域名定向的&lt;code&gt;def.shaloc.site&lt;/code&gt;，并且获得了ssllabs和myssl的A+评价。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

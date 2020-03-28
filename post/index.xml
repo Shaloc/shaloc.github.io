@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/post/</link>
+    <description>Recent content in Posts on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 17:49:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
+      <link>https://gblog.shaloc.site/post/hsts/</link>
+      <pubDate>Fri, 20 Mar 2020 17:49:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/hsts/</guid>
+      <description>&lt;p&gt;前一段时间由于对运营商劫持状况的担忧，我把所有子站都加上了https，包括用来做任意错误域名定向的&lt;code&gt;def.shaloc.site&lt;/code&gt;，并且获得了ssllabs和myssl的A+评价。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2019</title>
+      <link>https://gblog.shaloc.site/post/2019/</link>
+      <pubDate>Fri, 24 Jan 2020 16:04:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/2019/</guid>
+      <description>&lt;p&gt;2019年过去了，2019年的最后一篇blog也成功拖到了农历新年才开始写（被打死）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>第二次去长沙的游记</title>
+      <link>https://gblog.shaloc.site/post/second_travel_to_changsha/</link>
+      <pubDate>Wed, 08 Jan 2020 20:35:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/second_travel_to_changsha/</guid>
+      <description>&lt;p&gt;因为出差的原因，在几天前第二次去了长沙。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还路过了武汉！吓死宝宝了 (2020.2 modify&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows下使用GPG4WIN配置SSH和Git</title>
+      <link>https://gblog.shaloc.site/post/pgp_windows_ssh/</link>
+      <pubDate>Tue, 17 Sep 2019 11:12:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/pgp_windows_ssh/</guid>
+      <description>&lt;div class=&#34;bwbox bwbox-info&#34;&gt;
+    &lt;i class=&#34;bwicon-info&#34;&gt;&lt;/i&gt;
+    &lt;p&gt;建议使用最新版的软件进行操作，但是本说明可能不会立刻随着软件的更新更新。本说明使用了Cmder集成的git-for-windows。&lt;/p&gt;
+&lt;p&gt;GPG4WIN: &lt;a href=&#34;https://files.gpg4win.org/gpg4win-3.1.10.exe&#34;&gt;下载地址&lt;/a&gt;
+Cmder: &lt;a href=&#34;https://github.com/cmderdev/cmder/releases/download/v1.3.12/cmder.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Manjaro环境配置和软件记录</title>
+      <link>https://gblog.shaloc.site/post/manjaro_env/</link>
+      <pubDate>Mon, 22 Jul 2019 19:04:22 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/manjaro_env/</guid>
+      <description>&lt;p&gt;从重新开始使用ArchLinux到现在已经有几个月了，下面是一些经常使用和十分值得推荐的软件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#5 去以六月息</title>
+      <link>https://gblog.shaloc.site/post/weekly5/</link>
+      <pubDate>Sun, 23 Jun 2019 21:07:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/weekly5/</guid>
+      <description>&lt;p&gt;明天就要去接大可爱啦~开心！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python设计模式#1 单例模式</title>
+      <link>https://gblog.shaloc.site/post/python_design_mode_1/</link>
+      <pubDate>Wed, 29 May 2019 21:55:59 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/python_design_mode_1/</guid>
+      <description>&lt;p&gt;Python设计模式读书笔记开坑！(#1&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#4 勾指起誓</title>
+      <link>https://gblog.shaloc.site/post/distance/</link>
+      <pubDate>Wed, 29 May 2019 19:47:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/distance/</guid>
+      <description>&lt;p&gt;终于弄完毕业设计啦~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Inconsolata&#43;苹方</title>
+      <link>https://gblog.shaloc.site/post/font_inconpingfang/</link>
+      <pubDate>Fri, 26 Apr 2019 20:08:22 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/font_inconpingfang/</guid>
+      <description>因为MATLAB不支持分别设置中英文字体，如果只设置英文字体，中文字体就会变成非常难看的Fallback样式，然后感觉苹方的英文字体用来写程序怪怪的，但是中文字体就很好，所以把苹方的英文和英文符号替换成了Inconsolata，做出了这个InconPingFang，有Regular和Bold两个字重。显示效果大概如下：
+（中文） （英文） 使用的编辑器是Sublime Text，在VSCode中的表现也还行，这样在MATLAB里也可以用到还行的字体啦~
+ InconPingFang  百度网盘 提取码：om5y  OuO</description>
+    </item>
+    
+    <item>
+      <title>Sleep</title>
+      <link>https://gblog.shaloc.site/post/sleep/</link>
+      <pubDate>Wed, 24 Apr 2019 16:19:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/sleep/</guid>
+      <description>昨天不知道为什么Word没有把写好的论文保存好，然后把前一天几乎是爆肝写出来的论文重新写了一遍。其实昨晚也没有怎么睡好（真实情况是大概两点才睡着），然后今天大概一整天都是在疲惫和困倦中度过的。
+然后今天似乎又爆肝了一天，现在感觉更难受了。第三节虽然没写完也完全不想写下去了，感觉敲键盘的手也在一点点僵硬&amp;hellip;
+还好有大可爱陪着啦，不过大可爱似乎最近也不会早睡。但是还是羡慕大可爱晚上睡那么晚白天也能不太困啦，虽然巨可爱可以很晚睡很早起，但是白天大概脑袋里就全都是浆糊了噗。
+不管怎么说，不要忽视睡眠啊喵。</description>
+    </item>
+    
+    <item>
+      <title>#3 要关心大可爱鸭</title>
+      <link>https://gblog.shaloc.site/post/2019springweek7/</link>
+      <pubDate>Thu, 18 Apr 2019 18:57:36 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/2019springweek7/</guid>
+      <description>&lt;p&gt;和大可爱快乐地度过了在一起的第两百天！第一次和大可爱一起做的事情又多了几件啦～超开心！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 18.04 重新安装 Grub2</title>
+      <link>https://gblog.shaloc.site/post/reinstall_grub/</link>
+      <pubDate>Sat, 13 Apr 2019 10:09:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/reinstall_grub/</guid>
+      <description>&lt;p&gt;重新安装GNU/Grub2&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#2 也是想着大可爱的一周呐</title>
+      <link>https://gblog.shaloc.site/post/2019springweek6/</link>
+      <pubDate>Tue, 09 Apr 2019 20:00:55 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/2019springweek6/</guid>
+      <description>&lt;p&gt;时间过得真快啊(x)，大可爱已经完成了15%的出国生活啦，巨可爱和大可爱也快要两百天啦嘿嘿，巨可爱写出了人生中的第一封情书！不过其实要在发了这篇周记的第二天才给大可爱喵&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Travis自动部署Hugo</title>
+      <link>https://gblog.shaloc.site/post/travis_hugo/</link>
+      <pubDate>Tue, 09 Apr 2019 18:53:47 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/travis_hugo/</guid>
+      <description>&lt;p&gt;使用Travis自动化Hugo网站的生成和部署。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#1 压力</title>
+      <link>https://gblog.shaloc.site/post/2019springweek5/</link>
+      <pubDate>Tue, 02 Apr 2019 21:59:57 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/2019springweek5/</guid>
+      <description>&lt;p&gt;突然觉得没什么好写的，那么就不定期每周（？）写一下这种类似于碎碎念的东西吧x&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://gblog.shaloc.site/post/cloud/</link>
+      <pubDate>Fri, 29 Mar 2019 20:13:49 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/cloud/</guid>
+      <description>&lt;p&gt;连续几天都是阴天了嘤。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PlutoSDR&lt;1&gt; FM电台的GNU Radio实现(1)</title>
+      <link>https://gblog.shaloc.site/post/PlutoSDR_2/</link>
+      <pubDate>Thu, 17 Jan 2019 14:24:18 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/PlutoSDR_2/</guid>
+      <description>&lt;p&gt;弃用警告(&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PlutoSDR&lt;0&gt; 环境配置</title>
+      <link>https://gblog.shaloc.site/post/PlutoSDR_1/</link>
+      <pubDate>Thu, 17 Jan 2019 10:31:11 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/PlutoSDR_1/</guid>
+      <description>&lt;p&gt;君软件无线电本当上手(x)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>江宁织造博物馆</title>
+      <link>https://gblog.shaloc.site/post/%E6%B1%9F%E5%AE%81%E7%BB%87%E9%80%A0%E5%8D%9A%E7%89%A9%E9%A6%86/</link>
+      <pubDate>Sun, 13 Jan 2019 21:58:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/%E6%B1%9F%E5%AE%81%E7%BB%87%E9%80%A0%E5%8D%9A%E7%89%A9%E9%A6%86/</guid>
+      <description>来南京这么多年，今天还是第一次去江宁织造博物馆（前几天也是第一次去六朝。最开始完全以为是神秘的纺织制造，后来才知道江宁织造竟然是个官职.. 旗袍和云锦都很好看，特别推荐旗袍厅的神秘民国生活细节复原↓ 就是参观路线乱了一点，整体还是十分有设计感的(毕竟是吴良镛的设计
+假期学生免费，没去过的话不妨一试
+P.S. 开始勤奋更博！(希望服务器能撑得住) OvO</description>
+    </item>
+    
+    <item>
+      <title>Snow</title>
+      <link>https://gblog.shaloc.site/post/snow/</link>
+      <pubDate>Sat, 12 Jan 2019 11:39:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/snow/</guid>
+      <description>是一个人在图书馆对着电脑发呆的一天 想看雪 </description>
+    </item>
+    
+  </channel>
+</rss>

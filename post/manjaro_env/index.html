@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Manjaro环境配置和软件记录 | 大可爱和巨可爱</title>
+    <meta property="og:title" content="Manjaro环境配置和软件记录 - 大可爱和巨可爱">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2019-07-22T19:04:22&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2019-07-22T19:04:22&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="Manjaro环境配置和软件记录">
+        <meta name="author" content="Shaloc">
+        
+    <meta property="og:url" content="https://gblog.shaloc.site/post/manjaro_env/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://gblog.shaloc.site">
+                        大可爱和巨可爱
+                    </a>
+                
+                <p class="description">明朝来时，携满袖飞花</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://gblog.shaloc.site">首页</a>
+                    
+                    <a  href="https://gblog.shaloc.site/lover/" title="大可爱">大可爱</a>
+                    
+                    <a  href="https://gblog.shaloc.site/gpg/" title="GPG">GPG</a>
+                    
+                    <a  href="https://gblog.shaloc.site/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://gblog.shaloc.site/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link rel="stylesheet" href="/css/bwbox.css">
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Manjaro环境配置和软件记录</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年7月22日
+        </date>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">| <span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>从重新开始使用ArchLinux到现在已经有几个月了，下面是一些经常使用和十分值得推荐的软件。</p>
+<h2 id="包管理工具">包管理工具</h2>
+<p>PACMAN: pacman（<a href="https://mirror.tuna.tsinghua.edu.cn/help/archlinuxcn/">加入archlinuxcn源</a>）</p>
+<p>AUR: yay, yaourt</p>
+<p>更新到中国镜像：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman-mirrors -c China 
+</code></pre></div><h2 id="工作">工作</h2>
+<h3 id="文献管理">文献管理</h3>
+<p>Zotero <a href="http://help.jianguoyun.com/?p=3168">+ 坚果云</a></p>
+<p>Zotero使用的插件：Scihub QuickLook <a href="https://www.yangzhiping.com/tech/zotero4.html">ZotFile</a>，使用papership登录zotero帐号可以实现和移动平台的同步</p>
+<p>pdf阅读使用foxitpdf就好，大概是因为感觉标注和阅读更顺手，至于caj，可以尝试<code>pdf2caj</code>，当然能下载到pdf还是不要用caj啦。</p>
+<p>之前也看到很多同学在Windows上用CNKI E-Study，大概这也算是CNKI对文献管理工具的一种尝试吧，目前对中文期刊的支持可以说十分优秀了，但是英文可能就没那么好。</p>
+<p>目前已经尝试过Papers, EndNote, NoteExpress, Citavi这几种文献管理软件了，用起来的话还是Zotero和Citavi比较顺手，Zotero的全平台大概是最优秀的，当然也可能是因为我比较懒惰不想直接用bibtex管理文献？</p>
+<div class="bwbox bwbox-info">
+    <i class="bwicon-info"></i>
+    尽量在今年比较闲的时候写一个文献管理软件对比吧。
+</div>
+<h3 id="文本编辑">文本编辑</h3>
+<p>代码：Code-OSS和Atom，两个看起来差不多，但是不知道为什么总觉的Atom的提示看起来比较顺眼。VSCode的插件列表保存到了Gist上。 Vim(vimplus)</p>
+<p>文本：TexLive2018 + WPS Office 2019 + Libre Office
+当然需要用到Word的场合会用一下Windows的。</p>
+<p>笔记：Evernote - Tusk</p>
+<h3 id="ide">IDE</h3>
+<p>MATLAB(因为学校买了所以一直在用最新的)</p>
+<p>JetBrains ToolBox - Clion, PyCharm, IDEA</p>
+<p>Xilinx Vivado 2018.2和2019.1</p>
+<h3 id="shell">Shell</h3>
+<p>terminator + zsh</p>
+<p>zsh插件：git z extract zsh-autosuggestions zsh-syntax-highlighting</p>
+<p>zsh主题：powerline</p>
+<h3 id="输入法">输入法</h3>
+<p>fcitx + googlepinyin + 云输入插件</p>
+<h3 id="小工具">小工具</h3>
+<p>Electron-SSR：不需要命令行，但是Manjaro-gnome上需要额外安装<code>libappindicator</code>以正常显示右上角的图标</p>
+<p>balanaEtcher：磁盘镜像烧写工具</p>
+<h2 id="阅读">阅读</h2>
+<h3 id="图书管理">图书管理</h3>
+<p>Calibre（因为跨平台性能比较好）</p>
+<h3 id="pdf">PDF</h3>
+<p>Foxitpdf</p>
+<h2 id="媒体">媒体</h2>
+<p>vlc</p>
+<p>foobar2000(use wine, AUR repo)</p>
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "Shaloc/review"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://gblog.shaloc.site">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/hsts/" title="&#39;shaloc.site&#39; has been HSTS preloaded">&#39;shaloc.site&#39; has been HSTS preloaded</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/2019/" title="2019">2019</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/second_travel_to_changsha/" title="第二次去长沙的游记">第二次去长沙的游记</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/pgp_windows_ssh/" title="Windows下使用GPG4WIN配置SSH和Git">Windows下使用GPG4WIN配置SSH和Git</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/manjaro_env/" title="Manjaro环境配置和软件记录">Manjaro环境配置和软件记录</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/weekly5/" title="#5 去以六月息">#5 去以六月息</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/python_design_mode_1/" title="Python设计模式#1 单例模式">Python设计模式#1 单例模式</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/distance/" title="#4 勾指起誓">#4 勾指起誓</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/font_inconpingfang/" title="Inconsolata&#43;苹方">Inconsolata&#43;苹方</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/sleep/" title="Sleep">Sleep</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://gblog.shaloc.site/categories/life/">life (2)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/metaphysical/">metaphysical (3)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/python/">python (1)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/sdr/">sdr (2)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/share/">share (1)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/tech/">tech (4)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/weekly/">weekly (5)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/yearly/">yearly (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://gblog.shaloc.site/tags/OuO/">OuO</a>
+    
+    <a href="https://gblog.shaloc.site/tags/PlutoSDR/">PlutoSDR</a>
+    
+    <a href="https://gblog.shaloc.site/tags/coding/">coding</a>
+    
+    <a href="https://gblog.shaloc.site/tags/grub/">grub</a>
+    
+    <a href="https://gblog.shaloc.site/tags/hugo/">hugo</a>
+    
+    <a href="https://gblog.shaloc.site/tags/notes/">notes</a>
+    
+    <a href="https://gblog.shaloc.site/tags/python/">python</a>
+    
+    <a href="https://gblog.shaloc.site/tags/sdr/">sdr</a>
+    
+    <a href="https://gblog.shaloc.site/tags/site/">site</a>
+    
+    <a href="https://gblog.shaloc.site/tags/travis-ci/">travis-ci</a>
+    
+    <a href="https://gblog.shaloc.site/tags/ubuntu/">ubuntu</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E5%8D%9A%E7%89%A9%E9%A6%86/">博物馆</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E5%AD%97%E4%BD%93/">字体</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E6%91%B8%E9%B1%BC/">摸鱼</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E8%B6%B4%E4%BC%9A%E5%84%BF/">趴会儿</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://wiz.shaloc.site" title="WizNote">为知笔记（大概还有五个名额）</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://sm.ms/" title="sm.ms">土豪兽兽建的图床</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://liu-lingfei.github.io/" title="liu-lingfei">一个学弟的博客</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://gblog.shaloc.site/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://gblog.shaloc.site">大可爱和巨可爱 By Shaloc</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+         <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src=/upai.png style="width: 40px" /></a>  提供CDN服务.
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132327203-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+</body>
+
+</html>

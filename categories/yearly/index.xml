@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yearly on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/categories/yearly/</link>
+    <description>Recent content in yearly on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jan 2020 16:04:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/categories/yearly/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019</title>
+      <link>https://gblog.shaloc.site/post/2019/</link>
+      <pubDate>Fri, 24 Jan 2020 16:04:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/2019/</guid>
+      <description>&lt;p&gt;2019年过去了，2019年的最后一篇blog也成功拖到了农历新年才开始写（被打死）&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

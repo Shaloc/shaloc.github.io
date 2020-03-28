@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字体 on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/tags/%E5%AD%97%E4%BD%93/</link>
+    <description>Recent content in 字体 on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Apr 2019 20:08:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/tags/%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inconsolata&#43;苹方</title>
+      <link>https://gblog.shaloc.site/post/font_inconpingfang/</link>
+      <pubDate>Fri, 26 Apr 2019 20:08:22 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/font_inconpingfang/</guid>
+      <description>因为MATLAB不支持分别设置中英文字体，如果只设置英文字体，中文字体就会变成非常难看的Fallback样式，然后感觉苹方的英文字体用来写程序怪怪的，但是中文字体就很好，所以把苹方的英文和英文符号替换成了Inconsolata，做出了这个InconPingFang，有Regular和Bold两个字重。显示效果大概如下：
+（中文） （英文） 使用的编辑器是Sublime Text，在VSCode中的表现也还行，这样在MATLAB里也可以用到还行的字体啦~
+ InconPingFang  百度网盘 提取码：om5y  OuO</description>
+    </item>
+    
+  </channel>
+</rss>

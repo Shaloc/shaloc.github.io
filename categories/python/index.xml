@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/categories/python/</link>
+    <description>Recent content in python on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 May 2019 21:55:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python设计模式#1 单例模式</title>
+      <link>https://gblog.shaloc.site/post/python_design_mode_1/</link>
+      <pubDate>Wed, 29 May 2019 21:55:59 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/python_design_mode_1/</guid>
+      <description>&lt;p&gt;Python设计模式读书笔记开坑！(#1&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

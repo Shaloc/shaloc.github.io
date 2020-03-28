@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>使用Travis自动部署Hugo | 大可爱和巨可爱</title>
+    <meta property="og:title" content="使用Travis自动部署Hugo - 大可爱和巨可爱">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2019-04-09T18:53:47&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2019-04-09T18:53:47&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="使用Travis自动部署Hugo">
+        <meta name="author" content="Shaloc">
+        
+    <meta property="og:url" content="https://gblog.shaloc.site/post/travis_hugo/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://gblog.shaloc.site">
+                        大可爱和巨可爱
+                    </a>
+                
+                <p class="description">明朝来时，携满袖飞花</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://gblog.shaloc.site">首页</a>
+                    
+                    <a  href="https://gblog.shaloc.site/lover/" title="大可爱">大可爱</a>
+                    
+                    <a  href="https://gblog.shaloc.site/gpg/" title="GPG">GPG</a>
+                    
+                    <a  href="https://gblog.shaloc.site/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://gblog.shaloc.site/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link rel="stylesheet" href="/css/bwbox.css">
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">使用Travis自动部署Hugo</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年4月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://gblog.shaloc.site/categories/tech'>tech</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">| <span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>使用Travis自动化Hugo网站的生成和部署。</p>
+<p>之前做博客的自动部署使用的是在云服务器上部署一个webhook，每当提交一个git push的时候服务器pull一下更新的内容，然后再copy到wwwroot下来完成更新。这样做并没有什么问题，使用这种方法也可以很容易地将生成的静态文件部署到其他地点。但是这样要始终保证服务器的可用性，如果阿里云自动重启了KVM实例，博客就可能无法正常部署。</p>
+<p>同时，最近我将博客同时迁移到了git pages（这部分会在之后写），所以使用travis来做自动化部署也就成了一件顺理成章的事情。</p>
+<!--more-->
+<h2 id="准备工作">准备工作</h2>
+<p>首先要有一个github账号。Public的Repo可以免费使用Travis，不需要其他付费购买了。在travis上登陆一下，授予它必要的权限即可。</p>
+<h2 id="部署ssh公钥加密私钥">部署ssh公钥，加密私钥</h2>
+<p>因为travis自动部署时并不支持把环境变量作为stdin输入，我们不能通过命令行直接给git密码。因此我们要通过数字签名的方式来实现github的免密码登录和push权限获取。</p>
+<p>首先，要在自己的电脑上安装<code>travis</code>，具体方法如下（系统为ubuntu 18.04）：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install ruby ruby-dev
+gem install travis
+</code></pre></div><p>然后生成一对ssh公私钥</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b <span style="color:#099">4096</span> -C <span style="color:#d14">&#34;your_mail@your_domain&#34;</span> -f travis.key 
+</code></pre></div><p>不需要passphrase，直接使用即可。</p>
+<p>此操作会同时生成travis.key和travis.key.pub两个文件。将travis.key.pub中的内容复制到用来做pages的github repo setting - deploykeys中（点击Add depoly key)即可。记得在增加的时候把下面的“给予写入权限”也勾选上。</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac7de543149.png" alt="将travis秘钥部署到github"></p>
+<p>然后要处理travis.key，这是自己的私钥，是不能给别人看的部分，任何拿到这个私钥的人都可以伪装成你向所有你部署了公钥的地方进行改动，所以我们要用travis本身的加密机制将这个私钥加密再放到repo中，这样就算有人拿到了这个私钥也只是加密过的版本。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#998;font-style:italic"># 首先登录travis，登录org版，防止出现奇怪的问题</span>
+travis login --org
+<span style="color:#998;font-style:italic"># 输入github用户名、密码，进入工作目录</span>
+<span style="color:#0086b3">cd</span> path-to-repo
+<span style="color:#998;font-style:italic"># -r和--add选一个就好，--add会自动修改你的.travis.yml但是要求你在repo目录下。</span>
+travis encrypt-file path/to/travis.key <span style="color:#000;font-weight:bold">[</span> -r &lt;name of repo&gt; <span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">[</span> --add<span style="color:#000;font-weight:bold">]</span> -p
+<span style="color:#998;font-style:italic"># 正常情况下travis会自动将这次加密对应的key和iv存储到环境变量中，但是如果没有，你需要自己复制下面的key和iv并在travis中部署。</span>
+<span style="color:#998;font-style:italic"># 同时把这句话复制下来(xxx是你自己生成的)：</span>
+openssl aes-256-cbc -K <span style="color:#008080">$encrypted_xxx_key</span> -iv <span style="color:#008080">$encrypted_xxx_iv</span> -in travis.key.enc -out ./travis.key -d
+</code></pre></div><h2 id="编写travisyml">编写.travis.yml</h2>
+<p>进入存放博客代码的repo的根目录，创建一个.travis.yml。travis会将这个作为配置文件进行自动部署。这个文件有多少种可能的写法这里不做详细介绍，仅介绍本项目中重要的部分。</p>
+<p>首先是环境。hugo是用go语言编写的，我们不妨将lauguage设置为go，版本为stable即可。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">language</span>:<span style="color:#bbb"> </span>go<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">go</span>:<span style="color:#bbb"> </span>stable<span style="color:#bbb">
+</span></code></pre></div><p>设置一下版本，本项目中使用免费版travis，所以endpoint是<code>api.travis-ci.org</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">repos</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">Shaloc/blog_hugo</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">endpoint</span>:<span style="color:#bbb"> </span>https://api.travis-ci.org/<span style="color:#bbb">
+</span></code></pre></div><p>同时将需要用到的站点添加到known_hosts中，防止首次登陆需要接受RSA指纹（手动输入yes）。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">addons</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">ssh_known_hosts</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- github.com<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- gitee.com<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- shaloc.site<span style="color:#bbb">
+</span></code></pre></div><p>然后解密之前放在repo中的加密过的私钥，将它保存到<code>~/.ssh/id_rsa</code>中即可。这样临时生成的编译服务器就会把他作为私钥与其他服务器做ssh连接。同时配置一下git的用户名和邮箱。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">before_install</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 此处就是我们之前复制下来的那句话，不过要修改一下-out后的内容</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>- openssl<span style="color:#bbb"> </span>aes<span style="color:#099">-256</span>-cbc<span style="color:#bbb"> </span>-K<span style="color:#bbb"> </span>$encrypted_xxx_key<span style="color:#bbb"> </span>-iv<span style="color:#bbb"> </span>$encrypted_xxx_iv<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-in<span style="color:#bbb"> </span>./.travis/travis.key.enc<span style="color:#bbb"> </span>-out<span style="color:#bbb"> </span>~/.ssh/id_rsa<span style="color:#bbb"> </span>-d<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 修改一下id_rsa的权限，防止它被其他服务器拒绝</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>- chmod<span style="color:#bbb"> </span><span style="color:#099">400</span><span style="color:#bbb"> </span>~/.ssh/id_rsa<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- git<span style="color:#bbb"> </span>config<span style="color:#bbb"> </span>--global<span style="color:#bbb"> </span>user.name<span style="color:#bbb"> </span><span style="color:#d14">&#34;Shaloc&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>- git<span style="color:#bbb"> </span>config<span style="color:#bbb"> </span>--global<span style="color:#bbb"> </span>user.email<span style="color:#bbb"> </span><span style="color:#d14">&#34;shalocn@outlook.com&#34;</span><span style="color:#bbb">
+</span></code></pre></div><p>获取hugo并安装，同时把保存在另一个repo中的主题文件clone到项目中。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">install</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- go<span style="color:#bbb"> </span>get<span style="color:#bbb"> </span>github.com/gohugoio/hugo<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- git<span style="color:#bbb"> </span>submodule<span style="color:#bbb"> </span>update<span style="color:#bbb"> </span>--init<span style="color:#bbb"> </span>--recursive<span style="color:#bbb">
+</span></code></pre></div><p>然后执行hugo编译生成新的博客即可。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">script</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- hugo<span style="color:#bbb"> </span>version<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- hugo<span style="color:#bbb">
+</span></code></pre></div><p>部署部分单独放到了一个脚本中，在下一部分叙述。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">after_success</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- <span style="color:#d14">&#34;.travis/deploy.sh&#34;</span><span style="color:#bbb">
+</span></code></pre></div><p>##　部署</p>
+<p>在编译后由使用一个脚本进行部署。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-weight:bold;font-style:italic">#!/bin/bash
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#998;font-style:italic"># 设置工作目录和时区</span>
+<span style="color:#0086b3">set</span> -ev
+<span style="color:#0086b3">export</span> <span style="color:#008080">TZ</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;Asia/Shanghai&#39;</span>
+
+<span style="color:#998;font-style:italic"># 为了保留commit记录，使用clone而不是init然后force push来获取用来存储博客内容的repo</span>
+git clone -b master git@github.com:Shaloc/shaloc.github.io.git .deploy_git
+
+<span style="color:#998;font-style:italic"># 复制文件，同时要保留一些不是hugo生成的文件。</span>
+<span style="color:#0086b3">cd</span> .deploy_git
+git checkout master
+mv .git/ ../public/
+mv CNAME ../public/
+
+<span style="color:#998;font-style:italic"># 然后在repo中commit和push，将文件部署到最终的服务器中即可。此处用Site updated : 日期-时间 作为commit格式。</span>
+<span style="color:#0086b3">cd</span> ../public
+git add .
+git commit -m <span style="color:#d14">&#34;Site updated: </span><span style="color:#000;font-weight:bold">$(</span>date +<span style="color:#d14">&#34;%Y-%m-%d %H:%M:%S&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#d14">&#34;</span>
+git push origin master:master --force --quiet
+</code></pre></div><p>这样将文件都保存到对应位置之后，尝试修改一下博客中的文章，然后push，travis ci就会触发一次自动部署，可以在travis-ci中查看对应的部署日志并进行相应的除错工作。</p>
+<p><img src="https://i.loli.net/2019/04/09/5cac84b009b4e.png" alt="travis部署记录"></p>
+<p>好！这样我们就完成了自动部署工作。至于git pages的配置和ssl可以放到后面再说，大概会和cloudflare放到一起（可能是个大坑，还要自己再踩一踩呜呜呜）</p>
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://gblog.shaloc.site/tags/travis-ci'>travis-ci</a></li>
+                
+                <li><a href='https://gblog.shaloc.site/tags/hugo'>hugo</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "Shaloc/review"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://gblog.shaloc.site">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/hsts/" title="&#39;shaloc.site&#39; has been HSTS preloaded">&#39;shaloc.site&#39; has been HSTS preloaded</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/2019/" title="2019">2019</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/second_travel_to_changsha/" title="第二次去长沙的游记">第二次去长沙的游记</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/pgp_windows_ssh/" title="Windows下使用GPG4WIN配置SSH和Git">Windows下使用GPG4WIN配置SSH和Git</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/manjaro_env/" title="Manjaro环境配置和软件记录">Manjaro环境配置和软件记录</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/weekly5/" title="#5 去以六月息">#5 去以六月息</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/python_design_mode_1/" title="Python设计模式#1 单例模式">Python设计模式#1 单例模式</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/distance/" title="#4 勾指起誓">#4 勾指起誓</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/font_inconpingfang/" title="Inconsolata&#43;苹方">Inconsolata&#43;苹方</a>
+    </li>
+    
+    <li>
+        <a href="https://gblog.shaloc.site/post/sleep/" title="Sleep">Sleep</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://gblog.shaloc.site/categories/life/">life (2)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/metaphysical/">metaphysical (3)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/python/">python (1)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/sdr/">sdr (2)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/share/">share (1)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/tech/">tech (4)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/weekly/">weekly (5)</a></li>
+    
+    <li><a href="https://gblog.shaloc.site/categories/yearly/">yearly (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://gblog.shaloc.site/tags/OuO/">OuO</a>
+    
+    <a href="https://gblog.shaloc.site/tags/PlutoSDR/">PlutoSDR</a>
+    
+    <a href="https://gblog.shaloc.site/tags/coding/">coding</a>
+    
+    <a href="https://gblog.shaloc.site/tags/grub/">grub</a>
+    
+    <a href="https://gblog.shaloc.site/tags/hugo/">hugo</a>
+    
+    <a href="https://gblog.shaloc.site/tags/notes/">notes</a>
+    
+    <a href="https://gblog.shaloc.site/tags/python/">python</a>
+    
+    <a href="https://gblog.shaloc.site/tags/sdr/">sdr</a>
+    
+    <a href="https://gblog.shaloc.site/tags/site/">site</a>
+    
+    <a href="https://gblog.shaloc.site/tags/travis-ci/">travis-ci</a>
+    
+    <a href="https://gblog.shaloc.site/tags/ubuntu/">ubuntu</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E5%8D%9A%E7%89%A9%E9%A6%86/">博物馆</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E5%AD%97%E4%BD%93/">字体</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E6%91%B8%E9%B1%BC/">摸鱼</a>
+    
+    <a href="https://gblog.shaloc.site/tags/%E8%B6%B4%E4%BC%9A%E5%84%BF/">趴会儿</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://wiz.shaloc.site" title="WizNote">为知笔记（大概还有五个名额）</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://sm.ms/" title="sm.ms">土豪兽兽建的图床</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://liu-lingfei.github.io/" title="liu-lingfei">一个学弟的博客</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://gblog.shaloc.site/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://gblog.shaloc.site">大可爱和巨可爱 By Shaloc</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+         <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src=/upai.png style="width: 40px" /></a>  提供CDN服务.
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132327203-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+</body>
+
+</html>

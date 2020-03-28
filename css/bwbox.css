@@ -1,0 +1,155 @@
+/* use fontello as icon font */
+@font-face {
+    font-family: 'fontello';
+    src: url('fonts/fontello.eot');
+    src: url('fonts/fontello.eot#iefix') format('embedded-opentype'),
+        url('fonts/fontello.woff') format('woff'),
+        url('fonts/fontello.ttf') format('truetype'),
+        url('fonts/fontello.svg#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* bwbox styles */
+.bwbox {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid;
+    clear: both;
+    margin: 15px 0
+}
+
+.bwbox i {
+    font-size: 26px;
+    float: left;
+    position: relative;
+    left: -10px;
+    top: -10px;
+}
+
+.bwbox-blue,
+.bwbox-green,
+.bwbox-grey,
+.bwbox-red,
+.bwbox-tan,
+.bwbox-yellow {
+    padding: 15px
+}
+
+.bwbox-blue {
+    background-color: #dbe7f8;
+    border-color: #b7d2f2
+}
+
+.bwbox-green {
+    background-color: #f2f9e5;
+    border-color: #ddedbc
+}
+
+.bwbox-grey {
+    background-color: #f2f2f2;
+    border-color: #e5e5e5
+}
+
+.bwbox-red {
+    background-color: #ffdfdf;
+    border-color: #feabab
+}
+
+.bwbox-tan {
+    background-color: #fef8e1;
+    border-color: #feebab
+}
+
+.bwbox-yellow {
+    background-color: #ffffd5;
+    border-color: #feebab
+}
+
+.bwbox-alert,
+.bwbox-warning,
+.bwbox-download,
+.bwbox-info,
+.bwbox-tip {
+    padding: 15px 20px 15px 30px
+}
+
+.bwbox-warning {
+    background: #FCF8E3;
+    border-color: #FBEED5;
+    color: #C09853
+}
+
+.bwbox-alert {
+    background: #F2DEDE;
+    border-color: #EED3D7;
+    color: #B94A48
+}
+
+.bwbox-download {
+    background: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #3A87AD
+}
+
+.bwbox-info {
+    background: #e7e7e7;
+    border-color: #E0DEDE;
+    color: #333
+}
+
+.bwbox-tip {
+    background: #DFF0D8;
+    border-color: #D6E9C6;
+    color: #468847
+}
+
+/* icons on bwbox */
+[class^="bwicon-"]:before,
+[class*=" bwicon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak-as: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* font-size: 120%; */
+
+}
+
+.bwicon-alert:before {
+    content: '\e800';
+}
+
+.bwicon-warning:before {
+    content: '\e801';
+}
+
+.bwicon-download:before {
+    content: '\e802';
+}
+
+
+.bwicon-tip:before {
+    content: '\e803';
+}
+
+.bwicon-info:before {
+    content: '\e804';
+}

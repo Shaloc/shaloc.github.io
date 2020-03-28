@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sdr on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/categories/sdr/</link>
+    <description>Recent content in sdr on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jan 2019 14:24:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/categories/sdr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PlutoSDR&lt;1&gt; FM电台的GNU Radio实现(1)</title>
+      <link>https://gblog.shaloc.site/post/PlutoSDR_2/</link>
+      <pubDate>Thu, 17 Jan 2019 14:24:18 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/PlutoSDR_2/</guid>
+      <description>&lt;p&gt;弃用警告(&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PlutoSDR&lt;0&gt; 环境配置</title>
+      <link>https://gblog.shaloc.site/post/PlutoSDR_1/</link>
+      <pubDate>Thu, 17 Jan 2019 10:31:11 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/PlutoSDR_1/</guid>
+      <description>&lt;p&gt;君软件无线电本当上手(x)&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

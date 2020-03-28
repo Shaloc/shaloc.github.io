@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/categories/tech/</link>
+    <description>Recent content in tech on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 17:49:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
+      <link>https://gblog.shaloc.site/post/hsts/</link>
+      <pubDate>Fri, 20 Mar 2020 17:49:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/hsts/</guid>
+      <description>&lt;p&gt;前一段时间由于对运营商劫持状况的担忧，我把所有子站都加上了https，包括用来做任意错误域名定向的&lt;code&gt;def.shaloc.site&lt;/code&gt;，并且获得了ssllabs和myssl的A+评价。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows下使用GPG4WIN配置SSH和Git</title>
+      <link>https://gblog.shaloc.site/post/pgp_windows_ssh/</link>
+      <pubDate>Tue, 17 Sep 2019 11:12:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/pgp_windows_ssh/</guid>
+      <description>&lt;div class=&#34;bwbox bwbox-info&#34;&gt;
+    &lt;i class=&#34;bwicon-info&#34;&gt;&lt;/i&gt;
+    &lt;p&gt;建议使用最新版的软件进行操作，但是本说明可能不会立刻随着软件的更新更新。本说明使用了Cmder集成的git-for-windows。&lt;/p&gt;
+&lt;p&gt;GPG4WIN: &lt;a href=&#34;https://files.gpg4win.org/gpg4win-3.1.10.exe&#34;&gt;下载地址&lt;/a&gt;
+Cmder: &lt;a href=&#34;https://github.com/cmderdev/cmder/releases/download/v1.3.12/cmder.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 18.04 重新安装 Grub2</title>
+      <link>https://gblog.shaloc.site/post/reinstall_grub/</link>
+      <pubDate>Sat, 13 Apr 2019 10:09:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/reinstall_grub/</guid>
+      <description>&lt;p&gt;重新安装GNU/Grub2&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Travis自动部署Hugo</title>
+      <link>https://gblog.shaloc.site/post/travis_hugo/</link>
+      <pubDate>Tue, 09 Apr 2019 18:53:47 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/travis_hugo/</guid>
+      <description>&lt;p&gt;使用Travis自动化Hugo网站的生成和部署。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

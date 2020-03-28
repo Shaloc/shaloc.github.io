@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/categories/</link>
+    <description>Recent content in Categories on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 17:49:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tech</title>
+      <link>https://gblog.shaloc.site/categories/tech/</link>
+      <pubDate>Fri, 20 Mar 2020 17:49:39 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yearly</title>
+      <link>https://gblog.shaloc.site/categories/yearly/</link>
+      <pubDate>Fri, 24 Jan 2020 16:04:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/yearly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://gblog.shaloc.site/categories/life/</link>
+      <pubDate>Wed, 08 Jan 2020 20:35:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weekly</title>
+      <link>https://gblog.shaloc.site/categories/weekly/</link>
+      <pubDate>Sun, 23 Jun 2019 21:07:26 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/weekly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://gblog.shaloc.site/categories/python/</link>
+      <pubDate>Wed, 29 May 2019 21:55:59 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>share</title>
+      <link>https://gblog.shaloc.site/categories/share/</link>
+      <pubDate>Fri, 26 Apr 2019 20:08:22 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/share/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metaphysical</title>
+      <link>https://gblog.shaloc.site/categories/metaphysical/</link>
+      <pubDate>Wed, 24 Apr 2019 16:19:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/metaphysical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sdr</title>
+      <link>https://gblog.shaloc.site/categories/sdr/</link>
+      <pubDate>Thu, 17 Jan 2019 14:24:18 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/categories/sdr/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

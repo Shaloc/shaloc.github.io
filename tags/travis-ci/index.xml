@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>travis-ci on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/tags/travis-ci/</link>
+    <description>Recent content in travis-ci on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Apr 2019 18:53:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Travis自动部署Hugo</title>
+      <link>https://gblog.shaloc.site/post/travis_hugo/</link>
+      <pubDate>Tue, 09 Apr 2019 18:53:47 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/travis_hugo/</guid>
+      <description>&lt;p&gt;使用Travis自动化Hugo网站的生成和部署。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes on 大可爱和巨可爱</title>
+    <link>https://gblog.shaloc.site/tags/notes/</link>
+    <description>Recent content in notes on 大可爱和巨可爱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Sep 2019 11:12:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gblog.shaloc.site/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows下使用GPG4WIN配置SSH和Git</title>
+      <link>https://gblog.shaloc.site/post/pgp_windows_ssh/</link>
+      <pubDate>Tue, 17 Sep 2019 11:12:10 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/pgp_windows_ssh/</guid>
+      <description>&lt;div class=&#34;bwbox bwbox-info&#34;&gt;
+    &lt;i class=&#34;bwicon-info&#34;&gt;&lt;/i&gt;
+    &lt;p&gt;建议使用最新版的软件进行操作，但是本说明可能不会立刻随着软件的更新更新。本说明使用了Cmder集成的git-for-windows。&lt;/p&gt;
+&lt;p&gt;GPG4WIN: &lt;a href=&#34;https://files.gpg4win.org/gpg4win-3.1.10.exe&#34;&gt;下载地址&lt;/a&gt;
+Cmder: &lt;a href=&#34;https://github.com/cmderdev/cmder/releases/download/v1.3.12/cmder.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python设计模式#1 单例模式</title>
+      <link>https://gblog.shaloc.site/post/python_design_mode_1/</link>
+      <pubDate>Wed, 29 May 2019 21:55:59 +0800</pubDate>
+      
+      <guid>https://gblog.shaloc.site/post/python_design_mode_1/</guid>
+      <description>&lt;p&gt;Python设计模式读书笔记开坑！(#1&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
