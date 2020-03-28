@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
+    <link href="/post/hsts/"/>
+    <url>/post/hsts/</url>
+    
+    <content type="html"><![CDATA[<p>前一段时间由于对运营商劫持状况的担忧，我把所有子站都加上了https，包括用来做任意错误域名定向的<code>def.shaloc.site</code>，并且获得了ssllabs和myssl的A+评价。</p><a id="more"></a><p><img src="https://upaiimg.shaloc.site/pics/20200320185929.png" srcset="/img/loading.gif" alt="20200320185929.png"></p><p><img src="https://upaiimg.shaloc.site/pics/20200320185904.png" srcset="/img/loading.gif" alt="20200320185904.png"></p><p>测试了一段时间没有问题之后，我决定将本站域名加入HSTS preload列表。此后，如果您使用最新的下列浏览器（以及使用最新的下列浏览器内核的其他浏览器，如QQ浏览器、360安全浏览器、世界之窗浏览器、百度浏览器）访问本站以及本站的任意子域名，您将无法使用http方式连接。</p><p><img src="https://upaiimg.shaloc.site/pics/20200320190455.png" srcset="/img/loading.gif" alt="20200320190455.png"></p><p>为了能不被劫持地访问本站以及其他互联网上的资源，我强烈建议您更新到所有浏览器的最新版本，这些版本通常具有最新的HSTS preload列表。当然，某些使用陈旧内核的浏览器也可能没有预载最新的HSTS列表，如果我发现了这些浏览器，我会将它们更新到这篇文章中。</p><p>需要注意的是，为了满足最新的PCI DSS支付卡行业安全标准，本站点仅开启了TLSv1.2和TLSv1.3的一部分加密方法，具体支持或者不支持的浏览器列表请参考下表。基本上比较新的操作系统集成浏览器和主流的第三方浏览器都是可以支持的。</p><table><thead><tr><th>客户端握手模拟</th><th>from myssl.com</th></tr></thead><tbody><tr><td>Android 4.4.2</td><td>RSA(SHA256)</td></tr><tr><td>Android 5.0.0</td><td>RSA(SHA256)</td></tr><tr><td>Android 6.0</td><td>RSA(SHA256)</td></tr><tr><td>Android 7.0</td><td>RSA(SHA256)</td></tr><tr><td>Android 8.0</td><td>RSA(SHA256)</td></tr><tr><td>Baiduspider/2.0</td><td>RSA(SHA256)</td></tr><tr><td>Googlebot/2.0</td><td>RSA(SHA256)</td></tr><tr><td>YandexBot July 2018</td><td>RSA(SHA256)</td></tr><tr><td>360Spider July 2018</td><td>RSA(SHA256)</td></tr><tr><td>SougouSpider July 2018</td><td>RSA(SHA256)</td></tr><tr><td>Baidu HTTPS认证</td><td>RSA(SHA256)</td></tr><tr><td>BingPreview Jan 2015</td><td>RSA(SHA256)</td></tr><tr><td>Chrome 49 / XP SP3</td><td>RSA(SHA256)</td></tr><tr><td>Chrome 51 / Win 7</td><td>RSA(SHA256)</td></tr><tr><td>Chrome 63 /macOS High Sierra 10.13.2</td><td>RSA(SHA256)</td></tr><tr><td>Chrome 69 / Win 10</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 31.3.0 ESR / Win 7</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 47 / Win 7</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 49 / XP SP3</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 49 / Win 7</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 57 /macOS High Sierra 10.13.2</td><td>RSA(SHA256)</td></tr><tr><td>Firefox 62 / Win 10</td><td>RSA(SHA256)</td></tr><tr><td>IE 6 / XP   No FS1  No SNI2</td><td>握手失败 （handshake_failure）</td></tr><tr><td>IE 7 / Vista</td><td>握手失败 （protocol_version）</td></tr><tr><td>IE 8 / XP   No FS1  No SNI2</td><td>握手失败 （protocol_version）</td></tr><tr><td>IE 8-10 / Win 7</td><td>握手失败 （protocol_version）</td></tr><tr><td>IE 11 / Win 7</td><td>RSA(SHA256)</td></tr><tr><td>IE 11 / Win 8.1</td><td>RSA(SHA256)</td></tr><tr><td>IE 10 / Win Phone 8.0</td><td>握手失败 （protocol_version）</td></tr><tr><td>IE 11 / Win Phone 8.1</td><td>RSA(SHA256)</td></tr><tr><td>IE 11 / Win Phone 8.1 Update</td><td>RSA(SHA256)</td></tr><tr><td>IE 11 / Win 10</td><td>RSA(SHA256)</td></tr><tr><td>Edge 13 / Win 10</td><td>RSA(SHA256)</td></tr><tr><td>Edge 13 / Win Phone 10</td><td>RSA(SHA256)</td></tr><tr><td>Java 6u45  No SNI2</td><td>握手失败 （protocol_version）</td></tr><tr><td>Java 7u25</td><td>握手失败 （protocol_version）</td></tr><tr><td>Java 8u31</td><td>RSA(SHA256)</td></tr><tr><td>OpenSSL 0.9.8y</td><td>握手失败 （protocol_version）</td></tr><tr><td>OpenSSL 1.0.1l</td><td>RSA(SHA256)</td></tr><tr><td>OpenSSL 1.0.2e</td><td>RSA(SHA256)</td></tr><tr><td>Openssl 1.1.1</td><td>RSA(SHA256)</td></tr><tr><td>Safari 5.1.9 / OS X 10.6.8</td><td>握手失败 （protocol_version）</td></tr><tr><td>Safari 6 / iOS 6.0.1</td><td>RSA(SHA256)</td></tr><tr><td>Safari 6.0.4 / OS X 10.8.4</td><td>握手失败 （protocol_version）</td></tr><tr><td>Safari 7 / iOS 7.1</td><td>RSA(SHA256)</td></tr><tr><td>Safari 7 / OS X 10.9</td><td>RSA(SHA256)</td></tr><tr><td>Safari 8 / iOS 8.4</td><td>RSA(SHA256)</td></tr><tr><td>Safari 8 / OS X 10.10</td><td>RSA(SHA256)</td></tr><tr><td>Safari 9 / iOS 9</td><td>RSA(SHA256)</td></tr><tr><td>Safari 9 / OS X 10.11</td><td>RSA(SHA256)</td></tr><tr><td>Safari 10 / iOS 10</td><td>RSA(SHA256)</td></tr><tr><td>Safari 10 / OS X 10.12</td><td>RSA(SHA256)</td></tr><tr><td>Apple ATS 9 / iOS 9</td><td>RSA(SHA256)</td></tr><tr><td>Yahoo Slurp Jan 2015</td><td>RSA(SHA256)</td></tr><tr><td>UC浏览器 6</td><td>RSA(SHA256)</td></tr><tr><td>360极速浏览器 8</td><td>RSA(SHA256)</td></tr><tr><td>360浏览器 8</td><td>RSA(SHA256)</td></tr><tr><td>QQ浏览器 9</td><td>RSA(SHA256)</td></tr><tr><td>世界之窗浏览器 7</td><td>RSA(SHA256)</td></tr><tr><td>猎豹浏览器 6</td><td>RSA(SHA256)</td></tr><tr><td>傲游浏览器 5</td><td>RSA(SHA256)</td></tr><tr><td>搜狗浏览器 7</td><td>RSA(SHA256)</td></tr><tr><td>百度浏览器 8</td><td>RSA(SHA256)</td></tr></tbody></table><table><thead><tr><th>Handshake Simulation</th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Android 4.4.2</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Android 5.0.0</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Android 6.0</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; http/1.1</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Android 7.0</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>Android 8.0</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>Android 8.1</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Android 9.0</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>BingPreview Jan 2015</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Chrome 49 / XP SP3</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Chrome 69 / Win 7  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>Chrome 70 / Win 10</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Chrome 75 / Win 10  R</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Firefox 31.3.0 ESR / Win 7</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Firefox 47 / Win 7  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Firefox 49 / XP SP3</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Firefox 62 / Win 7  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>Firefox 67 / Win 10  R</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Googlebot Feb 2018</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>IE 11 / Win 7  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>IE 11 / Win 8.1  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; http/1.1</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>IE 11 / Win Phone 8.1  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; http/1.1</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>IE 11 / Win Phone 8.1 Update  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; http/1.1</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>IE 11 / Win 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Edge 15 / Win 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH x25519  FS</td></tr><tr><td>Edge 16 / Win 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH x25519  FS</td></tr><tr><td>Edge 18 / Win 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH x25519  FS</td></tr><tr><td>Edge 13 / Win Phone 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Java 8u161</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Java 11.0.3</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH secp256r1  FS</td></tr><tr><td>Java 12.0.1</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH secp256r1  FS</td></tr><tr><td>OpenSSL 1.0.1l  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>OpenSSL 1.0.2s  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>OpenSSL 1.1.0k  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   ECDH x25519  FS</td></tr><tr><td>OpenSSL 1.1.1c  R</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Safari 6 / iOS 6.0.1</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 7 / iOS 7.1  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 7 / OS X 10.9  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 8 / iOS 8.4  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 8 / OS X 10.10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 9 / iOS 9  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 9 / OS X 10.11  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 10 / iOS 10  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 10 / OS X 10.12  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Safari 12.1.2 / MacOS 10.14.6 Beta  R</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Safari 12.1.1 / iOS 12.3.1  R</td><td>-</td><td>TLS 1.3</td><td>TLS_AES_256_GCM_SHA384   ECDH x25519  FS</td></tr><tr><td>Apple ATS 9 / iOS 9  R</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2 &gt; h2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>Yahoo Slurp Jan 2015</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr><tr><td>YandexBot Jan 2015</td><td>RSA 2048 (SHA256)</td><td>TLS 1.2</td><td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   ECDH secp256r1  FS</td></tr></tbody></table><table><thead><tr><th># Not simulated clients (Protocol mismatch)</th><th></th></tr></thead><tbody><tr><td>Android 2.3.7   No SNI 2</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Android 4.0.4</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Android 4.1.1</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Android 4.2.2</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Android 4.3</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Baidu Jan 2015</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>IE 6 / XP   No FS 1   No SNI 2</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>IE 7 / Vista</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>IE 8 / XP   No FS 1   No SNI 2</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>IE 8-10 / Win 7  R</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>IE 10 / Win Phone 8.0</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Java 6u45   No SNI 2</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Java 7u25</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>OpenSSL 0.9.8y</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Safari 5.1.9 / OS X 10.6.8</td><td>Protocol mismatch (not simulated)</td></tr><tr><td>Safari 6.0.4 / OS X 10.8.4  R</td><td>Protocol mismatch (not simulated)</td></tr></tbody></table><p>(1) Clients that do not support Forward Secrecy (FS) are excluded when determining support for it.</p><p>(2) No support for virtual SSL hosting (SNI). Connects to the default site if the server uses SNI.</p><p>(3) Only first connection attempt simulated. Browsers sometimes retry with a lower protocol version.<br>(R) Denotes a reference browser or client, with which we expect better effective security.</p><p>(All) We use defaults, but some platforms do not use their best protocols and features (e.g., Java 6 &amp; 7, older IE).</p><p>(All) Certificate trust is not checked in handshake simulation, we only perform TLS handshake.</p><p>如果您使用特定的浏览器无法访问本站的某些子站点，并且提示的是https证书相关错误，请在这里留言。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>tech</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>site</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2019</title>
+    <link href="/post/2019/"/>
+    <url>/post/2019/</url>
+    
+    <content type="html"><![CDATA[<p>2019年过去了，2019年的最后一篇blog也成功拖到了农历新年才开始写（被打死）</p><a id="more"></a><p>一边整理照片一边看过去的一年，突然感觉好像时间过去了很久。</p><h2 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h2><p>一月刚考完研，和大可爱在南京玩。</p><p>二月就回家过年啦，回来之后和大可爱一起去了苏州，一个善良的大叔帮我们拍了第一张别人拍的情侣照，有趣。啊！还有第一次陪大可爱做手术。做手术和等恢复真的十分令人痛苦！所以还希望之后健康一点。</p><p>三月看了很多花花，但是把大可爱这朵花花送走了。</p><p>四月因为找到了一个有趣的食物清单，在南京里面逛来逛去，吃到了好多吃哒，也大概熟悉了南京的地图（没有）。大可爱也和寄宿家庭一起出去玩啦。也是这个时候开始给大可爱发了好多照片片(。</p><p>五月也在吃吃吃，不过热起来了，好晒啊。还是每天都和大可爱视频频。这段时间大概也是做毕设推进得最多的一段时间了。所谓DDL是第一生产力，感觉就是这样的，还赶在到DDL到之前做完了毕设的答辩。毕业照也差不多是在这个时候拍的，差不多就在这时候完成了一个本科生应该做的所有的事情，大概也算告别了本科四年的生活了吧。</p><p>六月找了小房房，大概是人生中真正意义上的第一次自己出去住[…]。还拿到了本科毕业证书，也有了之后三年的自己的工位。还去了一趟杭州把大可爱接回来啦。握紧手手。</p><p>七月和八月是十分快乐的假期啦~[…]</p><p>然后就是一个有点忙碌但是有大可爱陪的学期啦。比起有时差而且只能在中午和睡前才能视频频的时候感觉幸福了超多！</p><p>还在寒假刚刚开始的时候差点赶上了一次非常严重的疫情爆发（还好因为各种各样的原因没去武汉出差，感谢拖延症！）。</p><h2 id="意识流"><a href="#意识流" class="headerlink" title="意识流"></a>意识流</h2><p>一、</p><p>像一朵花儿一样漂亮，像一碗汤圆一样好吃</p><p><img src="https://upaiimg.shaloc.site/pics/638C64B96332F0FF4F6F612A9BEBA857.png" srcset="/img/loading.gif" alt="638C64B96332F0FF4F6F612A9BEBA857.png"></p><p><img src="https://upaiimg.shaloc.site/pics/1415D0FE223010C7725240DF9FA4DE5C.png" srcset="/img/loading.gif" alt="1415D0FE223010C7725240DF9FA4DE5C.png"></p><p>当然咸蛋黄也很好吃</p><p>二、</p><p>一个坑，进去之后多走了一公里才出来</p><p><img src="https://upaiimg.shaloc.site/pics/41BA6F4D1FBA6F0BC8DCD08DFBFD5449.png" srcset="/img/loading.gif" alt="41BA6F4D1FBA6F0BC8DCD08DFBFD5449.png"></p><p>有的时候要记得原路返回呀！</p><p>三、</p><p>今年最喜欢的天空的颜色</p><p><img src="https://upaiimg.shaloc.site/pics/72231C9911F762A32CF598E9DF9DB8BE.png" srcset="/img/loading.gif" alt="72231C9911F762A32CF598E9DF9DB8BE.png"></p><p>但是更喜欢大可爱！</p><p>四、</p><p><img src="https://upaiimg.shaloc.site/pics/341D1B9A4061B4BC3050F7E908F5A3A5.png" srcset="/img/loading.gif" alt="341D1B9A4061B4BC3050F7E908F5A3A5.png"></p><p>五、</p><p>要做好面部护理鸭</p><p><img src="https://upaiimg.shaloc.site/pics/6288BD6C6594897E76DB52753542FCA9.png" srcset="/img/loading.gif" alt="6288BD6C6594897E76DB52753542FCA9.png"></p><p>（x</p><h2 id="新年愿望"><a href="#新年愿望" class="headerlink" title="新年愿望"></a>新年愿望</h2><p>能对别人更温柔，但是对自己更果断</p><p>-10Kg</p><p>更可爱，更可靠</p><p>剩下的还没想好…</p><p><img src="https://upaiimg.shaloc.site/pics/D48294ECF7BAB6FAA947CC7E96541997.png" srcset="/img/loading.gif" alt="D48294ECF7BAB6FAA947CC7E96541997.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yearly</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第二次去长沙的游记</title>
+    <link href="/post/second_travel_to_changsha/"/>
+    <url>/post/second_travel_to_changsha/</url>
+    
+    <content type="html"><![CDATA[<p>因为出差的原因，在几天前第二次去了长沙。</p><blockquote><p>还路过了武汉！吓死宝宝了 (2020.2 modify</p></blockquote><a id="more"></a><p>上次大概非常急匆匆地点了美团跑腿，让他帮忙带了一杯茶颜悦色，事实上拿到手之后已经看起来只剩下2/3杯并且完全没有上面的奶油了（只有一个盖子，大概外卖和现场喝的完全不一样）。</p><p>（第一次拿到的茶颜悦色）</p><p><img src="https://upaiimg.shaloc.site/pics/29ABC6ED62F464E62CDC0B7D800D6A34.png" srcset="/img/loading.gif" alt="29ABC6ED62F464E62CDC0B7D800D6A34.png"></p><p>但是这次时间非常宽裕！甚至在回来之前还有时间去市中心玩。因此也有机会见识到茶颜悦色在长沙奶茶界的统治地位。在长沙最繁华的太平老街和坡子街这段路上，打开手机地图搜索茶颜悦色就可以很快获得20+个700m以内的结果，甚至还可以见到这样的场面</p><p>————一个丁字路口上不同的位置有三家！</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0624.JPG" srcset="/img/loading.gif" alt="IMG_0624.JPG"></p><p>然后尝试了大可爱推荐的人间烟火（看起来是比较新的）和他们的刚刚推出的三季虫。大概一个奶味比较重，一个茶味比较重，不过真的和上次所有坚果和奶油都被泡到茶里感觉不一样！这里只存了一张图。</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0593.JPG" srcset="/img/loading.gif" alt="IMG_0593.JPG"></p><p>当然，在找（网红）坡子街派出所的路上也非常巧合地看到了人生一串里边的胡嗲单车烧烤，可惜是中午，并没有营业。坡子街派出所门口其实是一堆非常老旧的建筑，并且在装修，十分吵闹，但是从片子里就完全看不出来。看来纪录片选择镜头的角度也十分关键了。</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0626.JPG" srcset="/img/loading.gif" alt="IMG_0626.JPG"></p><p>当然，长沙还有一种非常有名的食物，就是臭豆腐！虽然完全没有吃的欲望，但是在太平老街看到了一个臭豆腐博物馆（并且边上全部都是卖臭豆腐的店），里边演示了完整的臭豆腐制作过程。甚至可以去闻卤水的味道！甚至那个让你闻机器的味道还会在你闻的时候给你拍照片！（当然，我是不会把这种照片保存下来的）。有趣的是，臭豆腐也可以做成方便食品了。</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0617.JPG" srcset="/img/loading.gif" alt="IMG_0617.JPG"></p><p>（博物馆里展出的臭豆腐公仔）</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0618.JPG" srcset="/img/loading.gif" alt="IMG_0618.JPG"></p><p>和长沙臭豆腐一起卖的是非常大串的炸香肠。香肠爱好者本人义不容辞地尝试了一下，可惜这串炸得有点过了，大概是外焦里脆。还好和店员说了不要放太多辣椒。</p><p><img src="https://upaiimg.shaloc.site/pics/IMG_0621.JPG" srcset="/img/loading.gif" alt="IMG_0621.JPG"></p><p>长沙菜真的很辣！而且有的越吃越辣。连一个在长沙开的东北菜连锁店也未能幸免地把里边本来应该是甜椒的蔬菜换成了非常辣的辣椒，恐怖啊！</p><p>这次尝试了很多食物，但是到头来主要还是工作（并且出差的地方在郊区），下次再来的话要去橘子洲打卡吧。</p><p>下次（大概）<del>（或者新年）</del>是非常迟到的年终总结！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>life</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>#5 去以六月息</title>
+    <link href="/post/weekly5/"/>
+    <url>/post/weekly5/</url>
+    
+    <content type="html"><![CDATA[<p>明天就要去接大可爱啦~开心！</p><a id="more"></a><p>三个月听起来很短，但是大概只有经历过才会知道有多长吧。</p><p>在这里挖一个记录爱情的长篇的坑嘿嘿~</p><p>在这个年代已经很难再有诗一样的爱情了，诗和诗人大概和时间一起成为过去了吧。所以，我要做一个诗人。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>weekly</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python设计模式#1 单例模式</title>
+    <link href="/post/python_design_mode_1/"/>
+    <url>/post/python_design_mode_1/</url>
+    
+    <content type="html"><![CDATA[<p>Python设计模式读书笔记开坑！(#1</p><a id="more"></a><h2 id="单例模式-Single-Instance"><a href="#单例模式-Single-Instance" class="headerlink" title="单例模式(Single Instance)"></a>单例模式(Single Instance)</h2><p>单例模式，即只允许存在一个实例，当初始化实例时，如果实例已经存在，则获取这个实例，如果不存在，则创建它。</p><p>实现一个单例模式也只需依照这一原则，在实例内设置一个标志，创建新实例时，检查实例是否存在，然后决定创建一个新实例并返回还是返回已经存在的实例。</p><h2 id="Python实现示例"><a href="#Python实现示例" class="headerlink" title="Python实现示例"></a>Python实现示例</h2><pre><code class="python"># single_object.pyclass SingleObject(object):    &quot;&quot;&quot;SingleObject: the impl for single object&quot;&quot;&quot;    class _object():        &quot;&quot;&quot;The impl for object which will be kept as single object.&quot;&quot;&quot;        def __init__(self):            self.val = None        def __str__(self):            return &quot;{0!r} {1}&quot;.format(self, self.val)        # detailed functions    instance = None    def __new__(cls):        if not SingleObject.instance:            SingleObject.instance = SingleObject._object        return SingleObject.instance    def __getattr__(self, name):        return getattr(self.instance, name)    def __setattr__(self, name):        return setattr(self.instance, name)</code></pre><p>通过这种方法可以简单地保持<code>_object</code>有且只有一个，使用单例模式可以保持这个实例到的全局状态，这种模式适用于全局状态不会被运行中的其他模块修改，例如缓存、均衡、路由映射、日志记录等情况。</p><p>使用单例模式可以避免项目中的一个部分干扰另一个部分。</p><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>可以使用下列代码证实它是一个单例程序：</p><pre><code class="python">from note1 import SingleObjectobj1 = SingleObject()obj1.val = &quot; obj1 val &quot;print(obj1, id(obj1), obj1.val)obj2 = SingleObject()obj2.val = &quot; obj2 val &quot;print(obj2, id(obj2), obj2.val)print(obj1, id(obj1), obj1.val)</code></pre><p>如果运行正确，可以得到这样的输出：</p><pre><code class="bash">python note1.py &lt;class &#39;__main__.SingleObject._object&#39;&gt; 2627147239880  obj1 val&lt;class &#39;__main__.SingleObject._object&#39;&gt; 2627147239880  obj2 val&lt;class &#39;__main__.SingleObject._object&#39;&gt; 2627147239880  obj2 val</code></pre><p>可以看出obj1和obj2获得了相同的id，即同一个<code>_object</code>。</p><p>使用C++也可以进行类似的实现。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+      <tag>coding</tag>
+      
+      <tag>notes</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>#4 勾指起誓</title>
+    <link href="/post/distance/"/>
+    <url>/post/distance/</url>
+    
+    <content type="html"><![CDATA[<p>终于弄完毕业设计啦~</p><a id="more"></a><h2 id="这段时间做了什么"><a href="#这段时间做了什么" class="headerlink" title="这段时间做了什么"></a>这段时间做了什么</h2><p>终于做完了毕设！答辩也结束啦！毕业照也拍完啦！毕业典礼结束大概就彻底和本科生活说再见了，好快啊。</p><p><img src="https://i.loli.net/2019/05/29/5cee7aff4ee5853072.jpg" srcset="/img/loading.gif" alt="毕业照"></p><p>大概有四个星期都没怎么出去玩，也没怎么尝试新的食物。然而去了几次超市，尝试了一直心心念念的小鱼干之类，但是还没找到大可爱说的那种十分优秀的酸奶喵，大概还要再尝试一些啦。其实没出去玩大概还有天太热的原因啦（不过这几天天气凉爽了许多诶，大概可以多出去啦），然后再加上学校对面又开了一家一点点，想买奶茶之类大概也不用再去学则路那么远啦（每周饮用奶茶数量++），大概只有和大可爱散步和买小鱼干的时候才要去那里嘿嘿。</p><p>给大可爱寄了小信信！两个多月没用笔写字了，感觉写字都有一点点生疏了噗。是第一次寄国际的非快递信信，大概用了四天到国内的机场，然后又用了四天从上海到了旧金山，大概也算很快的了吧，下面只需要经过海关和USPS就可以送到大可爱的手上啦。</p><p>小树树也有8Kg啦，希望它能快点长大。</p><p><img src="https://i.loli.net/2019/05/29/5cee7b299765775880.png" srcset="/img/loading.gif" alt="小树树"></p><h2 id="接下来要做什么"><a href="#接下来要做什么" class="headerlink" title="接下来要做什么"></a>接下来要做什么</h2><p>学开车车，现实意义上的和（狗头）</p><p>等大可爱回来，真的还有不到一个月啦~</p><p>去把想尝试的食物先尝试一下~这几天天气也超棒，没有之前那么热啦</p><p><img src="https://i.loli.net/2019/05/29/5cee7ac492c2d62415.jpg" srcset="/img/loading.gif" alt="嘿嘿嘿"></p><h2 id="啾咪"><a href="#啾咪" class="headerlink" title="啾咪"></a>啾咪</h2><iframe name="netease-music" frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=1350160463&auto=1&height=66"></iframe><p>去吃烤冷面啦~❤</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>weekly</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Sleep</title>
+    <link href="/post/sleep/"/>
+    <url>/post/sleep/</url>
+    
+    <content type="html"><![CDATA[<p>昨天不知道为什么Word没有把写好的论文保存好，然后把前一天几乎是爆肝写出来的论文重新写了一遍。其实昨晚也没有怎么睡好（真实情况是大概两点才睡着），然后今天大概一整天都是在疲惫和困倦中度过的。</p><p>然后今天似乎又爆肝了一天，现在感觉更难受了。第三节虽然没写完也完全不想写下去了，感觉敲键盘的手也在一点点僵硬…</p><p>还好有大可爱陪着啦，不过大可爱似乎最近也不会早睡。但是还是羡慕大可爱晚上睡那么晚白天也能不太困啦，虽然巨可爱可以很晚睡很早起，但是白天大概脑袋里就全都是浆糊了噗。</p><p>不管怎么说，不要忽视睡眠啊喵。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>metaphysical</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>#3 要关心大可爱鸭</title>
+    <link href="/post/2019springweek7/"/>
+    <url>/post/2019springweek7/</url>
+    
+    <content type="html"><![CDATA[<p>和大可爱快乐地度过了在一起的第两百天！第一次和大可爱一起做的事情又多了几件啦～超开心！</p><a id="more"></a><p>虽然gbw可能不是一个仪式感非常重的人，但是那天gbw真的超期待也超用心准备啦嘿嘿。</p><p><img src="https://i.loli.net/2019/04/18/5cb877eed8d12.png" srcset="/img/loading.gif" alt="啾咪啾咪啾咪"></p><p>离和大可爱再见的日子更近啦～今天也要记得帮大可爱看机票和关注夏令营的事情鸭，还有去打印奖学金证书！</p><h2 id="日常分享食物"><a href="#日常分享食物" class="headerlink" title="日常分享食物"></a>日常分享食物</h2><p><img src="https://i.loli.net/2019/04/18/5cb877eef2299.png" srcset="/img/loading.gif" alt="List"></p><p>好！这周去的是莫愁湖附近的<strong>蔡家鸡汤面</strong>~</p><p>是一家很小的小店，店家附近的生活气息很浓厚，大概整条街都有很多闻起来就很好吃的东西。大概在是因为在南审附近吧。不过附近还有十分神秘的KTV洗浴一条街，怕了怕了。</p><p>可能是因为第一次去，只点了普通的鸡丝面，好像和常去那里的熟客点得并不太一样？感觉只加了一点点盐，但是鸡汤十分好喝（和上一个羊汤的情况好像啊），好像鸡杂汤倒是十分受欢迎诶。</p><p>（这里要补一张照片）</p><p>然后从莫愁湖站差不多走到了龙江站！大概是第一次到四号线这边的起点噗。</p><p>大概可以在大可爱回来之前吃完吧～</p><h2 id="要关心大可爱！"><a href="#要关心大可爱！" class="headerlink" title="要关心大可爱！"></a>要关心大可爱！</h2><p>巨可爱要记得关心大可爱鸭。</p><p>大可爱是如此温柔善良美丽可爱的女孩子，巨可爱怎么能舍得让她自己在一边哭哭呢？</p><p>要像一直把大可爱抱在怀里那样关心大可爱！</p><h2 id="下周"><a href="#下周" class="headerlink" title="下周.."></a>下周..</h2><p>开始写毕业论文啦～实验似乎也取得了比较优秀的进展OvO，那么就在这两周尽快写完吧～</p><p>大可爱要去隔壁俄勒冈的海边玩啦喵 xmdys，但是还是可以云玩水哒嘿嘿，不过要让大可爱注意安全啦喵</p><p>要期中考试啦，一起努力学习和搬砖吧～</p><p>开始想下一个要给大可爱的惊喜嘿嘿（小奶狗gbw(x</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后.."></a>最后..</h2><p>是同济那里拍到的火烧云！</p><p><img src="https://i.loli.net/2019/04/18/5cb877ef020dc.jpg" srcset="/img/loading.gif" alt="云"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>weekly</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>OuO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ubuntu 18.04 重新安装 Grub2</title>
+    <link href="/post/reinstall_grub/"/>
+    <url>/post/reinstall_grub/</url>
+    
+    <content type="html"><![CDATA[<p>重新安装GNU/Grub2</p><a id="more"></a><p>不知道发生了什么，从grub引导ubuntu的时候会出现神秘的错误，错误内容大概是</p><link rel="stylesheet" href="/bwbox.css"><div class="box box-info"><i class="bwicon-info"> </i>io错误，无法从'hd4'读盘</div><p>然后按下<kbd>Enter</kbd>后强行进入会直接kernel panic无法进入系统，kernal panic的内容大概也和磁盘io错误有关。抱着十分害怕的心情从另一个系统启动扫了一下磁盘，发现似乎问题并不是很严重（虽然如此crc校验错误计数器已经到了几千了）所以推测应该是grub在上次启动之后的某次操作中出了问题，所以还是先重装一下grub再考虑数据备份的问题吧。</p><p>首先要有一个烧录好的Live CD或者U盘，以便我们获得恢复环境。然后从U盘启动进入Ubuntu试用模式，这时候至少Busy box已经配置好了。</p><p>然后先把原来安装Ubuntu的卷挂载到/mnt下（哪里都可以）</p><pre><code class="bash">sudo mount /dev/sda7 /mnt</code></pre><p>此处如果不确定是哪个硬盘，可以先使用<code>sudo fdisk -l</code>，从分区的类型和容量推断。</p><p>然后chroot到原来的卷上。</p><pre><code class="bash">sudo mount --bind /dev /mnt/devsudo mount --bind /dev/pts /mnt/dev/ptssudo mount --bind /proc /mnt/procsudo mount --bind /sys /mnt/sys# 和嵌入式系统课程制作initrd.img好像啊sudo chroot /mnt</code></pre><p>然后大概是比较坑的部分，因为我的ubuntu和EFI分区并不在同一个硬盘上，所以要把grub安装到<code>/dev/sdb</code>。大部分网上的教程都会说直接<code>grub-install /dev/sdb</code>就好，但是这样会导致他报一个神秘的错，要么是找不到EFI分区，要么就会报错无法安装。最后看了一下grub-install的说明，我们可以直接把它安装到EFI分区，而不是指定使用那一个硬盘。</p><pre><code class="bash"># 挂载EFI分区sudo mount /dev/sdb1 /boot/efi# 安装grubgrub-install /boot/efigrub-install --recheck /boot/efi# 也可以不更新update-grub</code></pre><p>然后<code>exit</code>，<code>sudo reboot now</code>就好啦。</p><p>当然这样还是有点恐怖的，如果真的是硬盘坏了事情可能会麻烦很多，所以做好数据备份也十分重要。现在重要的数据大概同时备份到了OneDrive和NJU自己的SeaFile服务器。过一段时间再想换硬盘的事情啦。当然重新配置环境大概也是十分复杂的事情，所以决定做完毕设先弄一个环境配置的脚本，尽量实现工作环境一键部署吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>tech</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+      <tag>grub</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>#2 也是想着大可爱的一周呐</title>
+    <link href="/post/2019springweek6/"/>
+    <url>/post/2019springweek6/</url>
+    
+    <content type="html"><![CDATA[<p>时间过得真快啊(x)，大可爱已经完成了15%的出国生活啦，巨可爱和大可爱也快要两百天啦嘿嘿，巨可爱写出了人生中的第一封情书！不过其实要在发了这篇周记的第二天才给大可爱喵</p><a id="more"></a><p><img src="https://i.loli.net/2019/04/09/5cac8d19341da.png" srcset="/img/loading.gif" alt="啾咪"></p><p>虽然刚刚知道大可爱退掉了OS打算多在外面两周的时候我是有一点点超级想大可爱的（好像还不小心哭出来了）（似乎并没有被发现），但是仔细想了一下觉得应该为大可爱高兴才对鸭，没错！然后只能平时每天都看大可爱啦，噗有的时候自己真的会特别想一个人啦，黏人精gbw！不过时间被安排的很紧并不能去美帝看大可爱真的哭哭。</p><h2 id="吃"><a href="#吃" class="headerlink" title="吃"></a>吃</h2><p>3/11!感觉在大可爱回来之前还是很有希望的嘛嘿嘿嘿嘿嘿</p><p><img src="https://i.loli.net/2019/04/09/5cac8d1955c38.png" srcset="/img/loading.gif" alt="list"></p><p>这次尝试的是<strong>相约烩面</strong>。尝试了一下镇店之宝<strong>羊肉炝锅烩面</strong>噗。</p><p><img src="https://i.loli.net/2019/04/09/5cac8d196d971.png" srcset="/img/loading.gif" alt="羊肉炝锅烩面"></p><p>啊这做作的滤镜x</p><p>虽然汤很浓（这个真的好喝），但是肉并没有想象中的那么多，也不适合夏天吃啦。可能是习惯了米线的我对烩面还是无法完全接受？老板和老板娘都是河南人啦，虽然我去的时候老板全程除了收一下钱钱就一直在玩王者荣耀，其他全部都是老板娘做的啦。幸运的是我去得比较早，我走的时候里面都挤满了人，似乎这家店的口碑超棒啊。</p><h2 id="这周做了什么"><a href="#这周做了什么" class="headerlink" title="这周做了什么"></a>这周做了什么</h2><p>虽然毕设感觉确实没啥进展，不过已经开始查资料准备用用其他设备测试一下这些东西啦，然后顺便惊讶地发现了这个东西的输出功率连<code>0.1W</code>都不到，这也太惨了。</p><p>搬到了电子楼，虽然大可爱回来之后大概还是会每天和大可爱在一起啦，但是现在多少要逼着自己适应一下这种环境吗？虽然在电子楼和大可爱视频都只能打字这样，但是以后做社畜大概也只能早上和晚上和周末见到啦….好！那周末不去！就这么愉快地决定啦～</p><p>每天和大可爱用镜头在一起都超开心的！下次可以尝试中午带大可爱去外面吃啦，总是晚上大可爱都已经睡了嘤。</p><p>把博客迁移到了github pages，然后用cloudflare做了缓存，感觉确实快了好多啊，然后大概明天晚上把www页面也放上去吧～</p><h2 id="嘤"><a href="#嘤" class="headerlink" title="嘤"></a>嘤</h2><p>这周就每天都想好明天要做什么吧～不然感觉自己可能随时都会陷入无所事事。</p><p>就算把字一遍一遍打出来再删掉也可以发泄自己的情绪，而且完全对别人没影响！这样好棒啊。</p><p>在这里放一张晚上的天空吧～马上就要去叫大可爱起床啦</p><p><img src="https://i.loli.net/2019/04/09/5cac8d1971278.png" srcset="/img/loading.gif" alt="天！"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>weekly</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用Travis自动部署Hugo</title>
+    <link href="/post/travis_hugo/"/>
+    <url>/post/travis_hugo/</url>
+    
+    <content type="html"><![CDATA[<p>使用Travis自动化Hugo网站的生成和部署。</p><a id="more"></a><p>之前做博客的自动部署使用的是在云服务器上部署一个webhook，每当提交一个git push的时候服务器pull一下更新的内容，然后再copy到wwwroot下来完成更新。这样做并没有什么问题，使用这种方法也可以很容易地将生成的静态文件部署到其他地点。但是这样要始终保证服务器的可用性，如果阿里云自动重启了KVM实例，博客就可能无法正常部署。</p><p>同时，最近我将博客同时迁移到了git pages（这部分会在之后写），所以使用travis来做自动化部署也就成了一件顺理成章的事情。</p><!--more--><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>首先要有一个github账号。Public的Repo可以免费使用Travis，不需要其他付费购买了。在travis上登陆一下，授予它必要的权限即可。</p><h2 id="部署ssh公钥，加密私钥"><a href="#部署ssh公钥，加密私钥" class="headerlink" title="部署ssh公钥，加密私钥"></a>部署ssh公钥，加密私钥</h2><p>因为travis自动部署时并不支持把环境变量作为stdin输入，我们不能通过命令行直接给git密码。因此我们要通过数字签名的方式来实现github的免密码登录和push权限获取。</p><p>首先，要在自己的电脑上安装<code>travis</code>，具体方法如下（系统为ubuntu 18.04）：</p><pre><code class="bash">sudo apt updatesudo apt install ruby ruby-devgem install travis</code></pre><p>然后生成一对ssh公私钥</p><pre><code class="bash">ssh-keygen -t rsa -b 4096 -C &quot;your_mail@your_domain&quot; -f travis.key </code></pre><p>不需要passphrase，直接使用即可。</p><p>此操作会同时生成travis.key和travis.key.pub两个文件。将travis.key.pub中的内容复制到用来做pages的github repo setting - deploykeys中（点击Add depoly key)即可。记得在增加的时候把下面的“给予写入权限”也勾选上。</p><p><img src="https://i.loli.net/2019/04/09/5cac7de543149.png" srcset="/img/loading.gif" alt="将travis秘钥部署到github"></p><p>然后要处理travis.key，这是自己的私钥，是不能给别人看的部分，任何拿到这个私钥的人都可以伪装成你向所有你部署了公钥的地方进行改动，所以我们要用travis本身的加密机制将这个私钥加密再放到repo中，这样就算有人拿到了这个私钥也只是加密过的版本。</p><pre><code class="bash"># 首先登录travis，登录org版，防止出现奇怪的问题travis login --org# 输入github用户名、密码，进入工作目录cd path-to-repo# -r和--add选一个就好，--add会自动修改你的.travis.yml但是要求你在repo目录下。travis encrypt-file path/to/travis.key [ -r &lt;name of repo&gt; ] [ --add] -p# 正常情况下travis会自动将这次加密对应的key和iv存储到环境变量中，但是如果没有，你需要自己复制下面的key和iv并在travis中部署。# 同时把这句话复制下来(xxx是你自己生成的)：openssl aes-256-cbc -K $encrypted_xxx_key -iv $encrypted_xxx_iv -in travis.key.enc -out ./travis.key -d</code></pre><h2 id="编写-travis-yml"><a href="#编写-travis-yml" class="headerlink" title="编写.travis.yml"></a>编写.travis.yml</h2><p>进入存放博客代码的repo的根目录，创建一个.travis.yml。travis会将这个作为配置文件进行自动部署。这个文件有多少种可能的写法这里不做详细介绍，仅介绍本项目中重要的部分。</p><p>首先是环境。hugo是用go语言编写的，我们不妨将lauguage设置为go，版本为stable即可。</p><pre><code class="yaml">language: gogo: stable</code></pre><p>设置一下版本，本项目中使用免费版travis，所以endpoint是<code>api.travis-ci.org</code></p><pre><code class="yaml">repos:  Shaloc/blog_hugo:    endpoint: https://api.travis-ci.org/</code></pre><p>同时将需要用到的站点添加到known_hosts中，防止首次登陆需要接受RSA指纹（手动输入yes）。</p><pre><code class="yaml">addons:  ssh_known_hosts:  - github.com  - gitee.com  - shaloc.site</code></pre><p>然后解密之前放在repo中的加密过的私钥，将它保存到<code>~/.ssh/id_rsa</code>中即可。这样临时生成的编译服务器就会把他作为私钥与其他服务器做ssh连接。同时配置一下git的用户名和邮箱。</p><pre><code class="yaml">before_install:# 此处就是我们之前复制下来的那句话，不过要修改一下-out后的内容- openssl aes-256-cbc -K $encrypted_xxx_key -iv $encrypted_xxx_iv  -in ./.travis/travis.key.enc -out ~/.ssh/id_rsa -d# 修改一下id_rsa的权限，防止它被其他服务器拒绝- chmod 400 ~/.ssh/id_rsa- git config --global user.name &quot;Shaloc&quot;- git config --global user.email &quot;shalocn@outlook.com&quot;</code></pre><p>获取hugo并安装，同时把保存在另一个repo中的主题文件clone到项目中。</p><pre><code class="yaml">install:- go get github.com/gohugoio/hugo- git submodule update --init --recursive</code></pre><p>然后执行hugo编译生成新的博客即可。</p><pre><code class="yaml">script:- hugo version- hugo</code></pre><p>部署部分单独放到了一个脚本中，在下一部分叙述。</p><pre><code class="yaml">after_success:- &quot;.travis/deploy.sh&quot;</code></pre><p>##　部署</p><p>在编译后由使用一个脚本进行部署。</p><pre><code class="bash">#!/bin/bash# 设置工作目录和时区set -evexport TZ=&#39;Asia/Shanghai&#39;# 为了保留commit记录，使用clone而不是init然后force push来获取用来存储博客内容的repogit clone -b master git@github.com:Shaloc/shaloc.github.io.git .deploy_git# 复制文件，同时要保留一些不是hugo生成的文件。cd .deploy_gitgit checkout mastermv .git/ ../public/mv CNAME ../public/# 然后在repo中commit和push，将文件部署到最终的服务器中即可。此处用Site updated : 日期-时间 作为commit格式。cd ../publicgit add .git commit -m &quot;Site updated: $(date +&quot;%Y-%m-%d %H:%M:%S&quot;)&quot;git push origin master:master --force --quiet</code></pre><p>这样将文件都保存到对应位置之后，尝试修改一下博客中的文章，然后push，travis ci就会触发一次自动部署，可以在travis-ci中查看对应的部署日志并进行相应的除错工作。</p><p><img src="https://i.loli.net/2019/04/09/5cac84b009b4e.png" srcset="/img/loading.gif" alt="travis部署记录"></p><p>好！这样我们就完成了自动部署工作。至于git pages的配置和ssl可以放到后面再说，大概会和cloudflare放到一起（可能是个大坑，还要自己再踩一踩呜呜呜）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>tech</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>travis-ci</tag>
+      
+      <tag>hugo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>#1 压力</title>
+    <link href="/post/2019springweek5/"/>
+    <url>/post/2019springweek5/</url>
+    
+    <content type="html"><![CDATA[<p>突然觉得没什么好写的，那么就不定期每周（？）写一下这种类似于碎碎念的东西吧x</p><a id="more"></a><h2 id="食物！"><a href="#食物！" class="headerlink" title="食物！"></a>食物！</h2><p>前天去尝试了曹都巷的<strong>罗子龙罗家桂花汤圆</strong>，虽然是一个小巷子里的非常普通的小馆子，不过意外的好吃。大概是它甜甜的感觉恰好迎合了我的舌头，能让我感觉到非常愉悦，而且又没有甜到腻，不至于吃完了之后嘴里怪怪的。啊，真好啊。</p><p>当然蛋黄肉粽也很好吃！（来自一个十八年没吃过肉粽的少年的赞赏</p><h2 id="最近发生的事情"><a href="#最近发生的事情" class="headerlink" title="最近发生的事情"></a>最近发生的事情</h2><p>看到一个视频，</p><blockquote><p>“公司在催我！ 女朋友没带钥匙也催我！杭州小伙骑车逆行被拦后当场崩溃！”</p></blockquote><p>爆发大概也是处理无法承受的负面情绪的一种方式。</p><p>感觉之前的自己面对大部分焦虑的时候都会选择自己承受或者故意无视它们，这样大概很危险。感觉已经可以感受和分担别人的痛苦啦，希望自己能学会和别人坦露自己的痛苦吧。</p><h2 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a>愿望</h2><p>希望大可爱能顺利找到搬砖的地方！然后也希望自己能不是很虚弱地撑过这周…（吃过药之后感觉好多啦</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>weekly</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Cloud</title>
+    <link href="/post/cloud/"/>
+    <url>/post/cloud/</url>
+    
+    <content type="html"><![CDATA[<p>连续几天都是阴天了嘤。</p><a id="more"></a><p>看不到太阳看不到月亮看不清远处的山也拍不好小花花。连出门的动力都没有，不过周末还是出去去梅花山和桃花山看看吧。感觉整天在图书管里都要发霉了..</p><p>最近忙着做考研和做毕设什么都没更新，不过忙完这段时间就会好起来吧喵~</p><p>想起了很久很久很久之前听到的一首歌</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=428642856&auto=1&height=66"></iframe><p>啊天气快好起来吧，想看落日和花。</p><p>想和大可爱一起</p><p>－－－－－－－－－－－－－－－－</p><p><img src="https://i.loli.net/2019/03/29/5c9e144240327.jpeg" srcset="/img/loading.gif" alt="樱花花"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>metaphysical</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PlutoSDR&lt;1&gt; FM电台的GNU Radio实现(1)</title>
+    <link href="/post/PlutoSDR_2/"/>
+    <url>/post/PlutoSDR_2/</url>
+    
+    <content type="html"><![CDATA[<p>弃用警告(</p><a id="more"></a><link rel="stylesheet" href="/bwbox.css"><div class="box box-alert"><i class="bwicon-alert"> </i>本项目<strong>已经弃用</strong>, 这个东西的天线根本不支持FM波段</div><p>传输音频是SDR上手的不错的方法。使用GNU Radio搭设电台的发送模块和接收模块以传输音频。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一般来说FM电台的频率大概在70MHz~130MHz间，然而这枚芯片上的AD9363仅支持325-3800MHz@20MHz BW，然而根据<a href="https://wiki.analog.com/university/tools/pluto/users/customizing" target="_blank" rel="noopener">官网</a>所述，它是可以被Update到AD3964的70-6000MHz@56MHz BW的，只需要在PlutoSDR的U-Boot中设置两个环境变量：</p><pre><code class="bash">fw_setenv attr_name compatiblefw_setenv attr_val ad9364</code></pre><p>然后重启机器即可。</p><p>前后两种参数如下表所示：</p><table><thead><tr><th align="center">RF Transceiver</th><th align="center">LO tuning range</th><th align="center">Bandwidth</th></tr></thead><tbody><tr><td align="center">AD9363</td><td align="center">325-3800MHz</td><td align="center">20MHz</td></tr><tr><td align="center">AD9364</td><td align="center">70-6000MHz</td><td align="center">56MHz</td></tr></tbody></table><p>虽然官网上说只有旧机器才有可以升级的芯片，但是似乎我拿到的这两台都可以进行这样的操作。这可能是AD9363是没有通过某个测试的AD9364的芯片的原因。即没拿到许可，就贴了一个标称值更低的牌子先拿出来卖。</p><h2 id="发送模块"><a href="#发送模块" class="headerlink" title="发送模块"></a>发送模块</h2><p>发送模块由一个WAV采样模块（双通道）、加法器模块、窄带调频模块(NBFM)、重采样模块和PlutoSDR Sink(发送)模块构成。<br>音频采样率为44.1kHz<br>//待补完</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>sdr</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PlutoSDR</tag>
+      
+      <tag>sdr</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PlutoSDR&lt;0&gt; 环境配置</title>
+    <link href="/post/PlutoSDR_1/"/>
+    <url>/post/PlutoSDR_1/</url>
+    
+    <content type="html"><![CDATA[<p>君软件无线电本当上手(x)</p><a id="more"></a><h2 id="PlutoSDR简介"><a href="#PlutoSDR简介" class="headerlink" title="PlutoSDR简介"></a>PlutoSDR简介</h2><p>参考AD官网即可。</p><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>PlutoSDR官方镜像 + Ubuntu 18.04(Parallel Desktop虚拟机)</p><h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="iio-oscilloscope"><a href="#iio-oscilloscope" class="headerlink" title="iio-oscilloscope"></a>iio-oscilloscope</h3><pre><code class="bash"># install essential toolssudo apt-get -y install libglib2.0-dev libgtk2.0-dev libgtkdatabox-dev libmatio-dev libfftw3-dev libxml2 libxml2-dev bison flex libavahi-common-dev libavahi-client-dev libcurl4-openssl-dev libjansson-dev cmake libaio-dev## build &amp; install libiiosudo apt-get install libxml2 libxml2-dev bison flex libcdk5-dev cmake libaio-dev libusb-1.0-0-dev libserialport-dev libxml2-dev libavahi-client-dev doxygen graphviz### enable USB backendcd /usr/include/linux/usbsudo rm functionfs.hsudo wget https://raw.githubusercontent.com/torvalds/linux/master/include/uapi/linux/usb/functionfs.h### clone &amp; buildcd ~/sdrgit clone https://github.com/analogdevicesinc/libiio.gitcd libiiocmake .make allsudo make install## build &amp; install libad9361-iiocd ~/sdrgit clone https://github.com/analogdevicesinc/libad9361-iio.gitcd libad9361-iiocmake .makesudo make install# build itselfcd ~/sdrgit clone https://github.com/analogdevicesinc/iio-oscilloscope.gitcd iio-oscilloscopegit checkout origin/mastermakesudo make install</code></pre><p>run:</p><pre><code class="bash">osc</code></pre><h3 id="GNU-Radio"><a href="#GNU-Radio" class="headerlink" title="GNU Radio"></a>GNU Radio</h3><pre><code class="bash"># after fininshing the installation of osc# Download and build gr-iiocd ~/sdr# finstly, setup the PYTHONPATH (in environment variables)# we could use gnuradio in python after this stepecho &#39;PYTHONPATH=/usr/local/lib/python3.6/dist-packages/gnuradio:${PYTHONPATH}&#39; &gt;&gt; ~/.zshrc # I use zsh, change it to your own shell&#39;s rc e.g. ~/.bashrcsource ~/.zshrc # load oncegit clone https://github.com/analogdevicesinc/gr-iio.gitcd gr-iiocmake .make sudo make installcd ..sudo ldconfig# finallysudo cp -r /usr/local/lib/python2.7/dist-packages/gnuradio/iio /usr/lib/python2.7/dist-packages/gnuradio/# also copy the python 3.6 libssudo cp -r /usr/local/lib/python3.6/dist-packages/gnuradio/iio /usr/lib/python3.6/dist-packages/gnuradio/</code></pre><h3 id="PlutoSDR-Python"><a href="#PlutoSDR-Python" class="headerlink" title="PlutoSDR_Python"></a>PlutoSDR_Python</h3><p>也可以用Python直接控制PultoSDR的官方固件</p><pre><code class="bash">cd ~/sdrcd libiio/bindings/pythonsudo python setup.py installsudo python3 setup.py installcd ~/sdrgit clone https://github.com/radiosd/rsdLib.gitcd rsdLibsudo python setup.py installsudo python3 setup.py installcd ~/sdrgit clone https://github.com/radiosd/PlutoSdrcd PlutoSdrsudo python setup.py installsudo python3 setup.py install</code></pre><p>PlutoSDR中的相关测试都可以用，使用这些测试大概可以了解相关接口。</p><blockquote><p>注意，因为设置和取值精度的问题，有些测试自己都不能通过。<br>这可能是一些bug</p></blockquote><p>API接口都可以直接使用：</p><pre><code class="python">from pluto.pluto_sdr import PlutoSdrsdr = PlutoSdr()</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>sdr</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PlutoSDR</tag>
+      
+      <tag>sdr</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>江宁织造博物馆</title>
+    <link href="/post/%E6%B1%9F%E5%AE%81%E7%BB%87%E9%80%A0%E5%8D%9A%E7%89%A9%E9%A6%86/"/>
+    <url>/post/%E6%B1%9F%E5%AE%81%E7%BB%87%E9%80%A0%E5%8D%9A%E7%89%A9%E9%A6%86/</url>
+    
+    <content type="html"><![CDATA[<p>来南京这么多年，今天还是第一次去江宁织造博物馆（前几天也是第一次去六朝。最开始完全以为是神秘的纺织制造，后来才知道江宁织造竟然是个官职..<br/><br>旗袍和云锦都很好看，特别推荐旗袍厅的神秘民国生活细节复原↓<br><img src="https://one.shaloc.site/?/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-13%20%E4%B8%8B%E5%8D%889.27.30.png" srcset="/img/loading.gif" alt="一个广告"><br>就是参观路线乱了一点，整体还是十分有设计感的(毕竟是吴良镛的设计</p><p>假期学生免费，没去过的话不妨一试</p><p>P.S. 开始勤奋更博！(希望服务器能撑得住)<br>OvO</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>摸鱼</tag>
+      
+      <tag>博物馆</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Snow</title>
+    <link href="/post/snow/"/>
+    <url>/post/snow/</url>
+    
+    <content type="html"><![CDATA[<p>是一个人在图书馆对着电脑发呆的一天<br>想看雪<br><img src="https://i.loli.net/2019/01/12/5c3966414dd28.jpeg" srcset="/img/loading.gif" alt="躺平"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>metaphysical</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>趴会儿</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
