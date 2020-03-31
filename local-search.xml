@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>观前提示</title>
+    <link href="/post/readme_first/"/>
+    <url>/post/readme_first/</url>
+    
+    <content type="html"><![CDATA[<p>由于作者刚刚从hugo迁移到hexo，有很多页面/功能因为以下原因暂时无法直接迁移，所以还要等一下下才能看到全部的内容：</p><ul><li>hugo和hexo的shortcode形式不一样，hugo的shortcode会触发hexo的error</li><li>ci几乎要完全重新部署，而且我并不想再把生成前的部分也公开了（虽然我可以用travis ci的.com domain，这货好像能处理private repo）</li><li><del>我很懒</del></li></ul><p>(逃</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>temp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
     <link href="/post/hsts/"/>
     <url>/post/hsts/</url>
