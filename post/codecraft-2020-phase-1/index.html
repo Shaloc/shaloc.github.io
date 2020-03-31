@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="Shaloc">
   <meta name="keywords" content="">
-  <title>PlutoSDR&lt;0&gt; 环境配置 - 大可爱和巨可爱</title>
+  <title>关于CodeCraft2020热身赛的一点想法 - 大可爱和巨可爱</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
@@ -125,7 +125,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://upaiimg.shaloc.site/pics/banner_default.jpg') no-repeat center center;
+         style="background: url('https://upaiimg.shaloc.site/pics/20200331211534.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -138,7 +138,7 @@
               
                 <p class="mt-3 post-meta">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  星期四, 一月 17日 2019, 2:31
+                  星期二, 三月 31日 2020, 9:09
                 </p>
               
 
@@ -147,7 +147,7 @@
                   
                   <span class="post-meta">
                     <i class="far fa-chart-bar"></i>
-                    本文有 491 字
+                    本文有 214 字
                   </span>
                 
 
@@ -155,7 +155,7 @@
                   
                   <span class="post-meta">
                       <i class="far fa-clock"></i>
-                      阅读本文大约需要 2 分钟
+                      阅读本文大约需要 1 分钟
                   </span>
                 
 
@@ -183,82 +183,14 @@
           <div class="post-content mx-auto" id="post">
             
             <div class="markdown-body">
-              <p>君软件无线电本当上手(x)</p>
-<a id="more"></a>
-
-<h2 id="PlutoSDR简介"><a href="#PlutoSDR简介" class="headerlink" title="PlutoSDR简介"></a>PlutoSDR简介</h2><p>参考AD官网即可。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>PlutoSDR官方镜像 + Ubuntu 18.04(Parallel Desktop虚拟机)</p>
-<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><h3 id="iio-oscilloscope"><a href="#iio-oscilloscope" class="headerlink" title="iio-oscilloscope"></a>iio-oscilloscope</h3><pre><code class="bash"># install essential tools
-sudo apt-get -y install libglib2.0-dev libgtk2.0-dev libgtkdatabox-dev libmatio-dev libfftw3-dev libxml2 libxml2-dev bison flex libavahi-common-dev libavahi-client-dev libcurl4-openssl-dev libjansson-dev cmake libaio-dev
-## build &amp; install libiio
-sudo apt-get install libxml2 libxml2-dev bison flex libcdk5-dev cmake libaio-dev libusb-1.0-0-dev libserialport-dev libxml2-dev libavahi-client-dev doxygen graphviz
-### enable USB backend
-cd /usr/include/linux/usb
-sudo rm functionfs.h
-sudo wget https://raw.githubusercontent.com/torvalds/linux/master/include/uapi/linux/usb/functionfs.h
-### clone &amp; build
-cd ~/sdr
-git clone https://github.com/analogdevicesinc/libiio.git
-cd libiio
-cmake .
-make all
-sudo make install
-## build &amp; install libad9361-iio
-cd ~/sdr
-git clone https://github.com/analogdevicesinc/libad9361-iio.git
-cd libad9361-iio
-cmake .
-make
-sudo make install
-# build itself
-cd ~/sdr
-git clone https://github.com/analogdevicesinc/iio-oscilloscope.git
-cd iio-oscilloscope
-git checkout origin/master
-make
-sudo make install</code></pre>
-<p>run:</p>
-<pre><code class="bash">osc</code></pre>
-<h3 id="GNU-Radio"><a href="#GNU-Radio" class="headerlink" title="GNU Radio"></a>GNU Radio</h3><pre><code class="bash"># after fininshing the installation of osc
-# Download and build gr-iio
-cd ~/sdr
-# finstly, setup the PYTHONPATH (in environment variables)
-# we could use gnuradio in python after this step
-echo &#39;PYTHONPATH=/usr/local/lib/python3.6/dist-packages/gnuradio:${PYTHONPATH}&#39; &gt;&gt; ~/.zshrc # I use zsh, change it to your own shell&#39;s rc e.g. ~/.bashrc
-source ~/.zshrc # load once
-git clone https://github.com/analogdevicesinc/gr-iio.git
-cd gr-iio
-cmake .
-make 
-sudo make install
-cd ..
-sudo ldconfig
-# finally
-sudo cp -r /usr/local/lib/python2.7/dist-packages/gnuradio/iio /usr/lib/python2.7/dist-packages/gnuradio/
-# also copy the python 3.6 libs
-sudo cp -r /usr/local/lib/python3.6/dist-packages/gnuradio/iio /usr/lib/python3.6/dist-packages/gnuradio/</code></pre>
-<h3 id="PlutoSDR-Python"><a href="#PlutoSDR-Python" class="headerlink" title="PlutoSDR_Python"></a>PlutoSDR_Python</h3><p>也可以用Python直接控制PultoSDR的官方固件</p>
-<pre><code class="bash">cd ~/sdr
-cd libiio/bindings/python
-sudo python setup.py install
-sudo python3 setup.py install
-cd ~/sdr
-git clone https://github.com/radiosd/rsdLib.git
-cd rsdLib
-sudo python setup.py install
-sudo python3 setup.py install
-cd ~/sdr
-git clone https://github.com/radiosd/PlutoSdr
-cd PlutoSdr
-sudo python setup.py install
-sudo python3 setup.py install</code></pre>
-<p>PlutoSDR中的相关测试都可以用，使用这些测试大概可以了解相关接口。</p>
-<blockquote>
-<p>注意，因为设置和取值精度的问题，有些测试自己都不能通过。<br>这可能是一些bug</p>
-</blockquote>
-<p>API接口都可以直接使用：</p>
-<pre><code class="python">from pluto.pluto_sdr import PlutoSdr
-sdr = PlutoSdr()</code></pre>
+              <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><p>ARM Neon真的很强，如果能用好会很不错。当然开多进程会加速，但是开多线程不会就很玄学了，大概是测评系统的问题。</p>
+<p>在训练集里加入负数特征，被人发现测评的数据集里边特征全是正的，然后可以在训练的时候不考虑有负数特征的条目，大不好特不好。</p>
+<p>接上，还有一些只根据一个特征判断结果的，这就是你们说的面向鲲鹏优化？</p>
+<p>因此，这次华为<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="被偷鸡偷得妈都不认识" ontouchstart>偷妈不认</span></span>了。</p>
+<p>pjb服务器，赛程都到一半了才修到能用的程度。</p>
+<p>为啥要在出题的时候允许Python和Java？这不是明摆着恶心人呢吗。</p>
+<p>再一次证明了我是抽奖绝缘体。</p>
+<p>总之初赛加油吧，这次有队友了。</p>
 
             </div>
             <hr>
@@ -268,7 +200,7 @@ sdr = PlutoSdr()</code></pre>
                   <span>
                 <i class="iconfont icon-inbox"></i>
                     
-                      <a class="hover-with-bg" href="/categories/sdr/">sdr</a>
+                      <a class="hover-with-bg" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
                       &nbsp;
                     
                   </span>&nbsp;&nbsp;
@@ -277,9 +209,7 @@ sdr = PlutoSdr()</code></pre>
                   <span>
                 <i class="iconfont icon-tag"></i>
                     
-                      <a class="hover-with-bg" href="/tags/PlutoSDR/">PlutoSDR</a>
-                    
-                      <a class="hover-with-bg" href="/tags/sdr/">sdr</a>
+                      <a class="hover-with-bg" href="/tags/Coding/">Coding</a>
                     
                   </span>
                 
@@ -292,18 +222,12 @@ sdr = PlutoSdr()</code></pre>
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/post/PlutoSDR_2/">
-                        <i class="fa fa-chevron-left"></i>
-                        <span class="hidden-mobile">PlutoSDR<1> FM电台的GNU Radio实现(1)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/post/%E6%B1%9F%E5%AE%81%E7%BB%87%E9%80%A0%E5%8D%9A%E7%89%A9%E9%A6%86/">
-                        <span class="hidden-mobile">江宁织造博物馆</span>
+                      <a href="/post/readme_first/">
+                        <span class="hidden-mobile">观前提示</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="fa fa-chevron-right"></i>
                       </a>
@@ -502,7 +426,7 @@ sdr = PlutoSdr()</code></pre>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "PlutoSDR<0> 环境配置&nbsp;",
+        "关于CodeCraft2020热身赛的一点想法&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 45,

@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>关于CodeCraft2020热身赛的一点想法</title>
+    <link href="/post/codecraft-2020-phase-1/"/>
+    <url>/post/codecraft-2020-phase-1/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><p>ARM Neon真的很强，如果能用好会很不错。当然开多进程会加速，但是开多线程不会就很玄学了，大概是测评系统的问题。</p><p>在训练集里加入负数特征，被人发现测评的数据集里边特征全是正的，然后可以在训练的时候不考虑有负数特征的条目，大不好特不好。</p><p>接上，还有一些只根据一个特征判断结果的，这就是你们说的面向鲲鹏优化？</p><p>因此，这次华为<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="被偷鸡偷得妈都不认识" ontouchstart>偷妈不认</span></span>了。</p><p>pjb服务器，赛程都到一半了才修到能用的程度。</p><p>为啥要在出题的时候允许Python和Java？这不是明摆着恶心人呢吗。</p><p>再一次证明了我是抽奖绝缘体。</p><p>总之初赛加油吧，这次有队友了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂谈</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Coding</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>观前提示</title>
     <link href="/post/readme_first/"/>
     <url>/post/readme_first/</url>
