@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Shaloc">
+  <meta name="keywords" content="">
+  <title>为什么谷歌也得不到答案了 - 大可爱和巨可爱</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.13.0/css/mdb.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link  rel="stylesheet" href="/lib/prettify/github-v2.min.css" />
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link defer rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>大可爱和巨可爱</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/GPG/">GPG</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/Tools/">Tools</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://upaiimg.shaloc.site/pics/banner_default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <p class="mt-3 post-meta">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  星期六, 四月 4日 2020, 5:29
+                </p>
+              
+
+              <p class="mt-1">
+                
+                  
+                  <span class="post-meta">
+                    <i class="far fa-chart-bar"></i>
+                    本文有 900 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta">
+                      <i class="far fa-clock"></i>
+                      阅读本文大约需要 3 分钟
+                  </span>
+                
+
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5 z-depth-3" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <div class="markdown-body">
+              <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><p>本科时候的一个老师告诉我，不要用搜索引擎搜索直接遇到的问题以期得到解答，更多的时候要使用调试工具或者阅读文档自己寻找答案。三年后的现在，不使用一些技巧地使用搜索引擎真的无法获得很多问题的答案了（包括使用非中文搜索引擎搜索中文内容），中文互联网近些年来到底发生了什么？</p>
+<h2 id="逐渐局域网化的内容产出地"><a class="markdownIt-Anchor" href="#逐渐局域网化的内容产出地"></a> 逐渐局域网化的内容产出地</h2>
+<p>一些原创社区为了保护原创者们的权益，防止他们的文章被轻易地检索和盗用，将自己设置为拒绝外部搜索引擎检索，这本身可能没什么问题。但是问题是原创社区内的内容一样会被抄袭者改写、盗用，而这种封闭一方面增加了只会使用搜索引擎的人群找到文章真正的出处的难度，另一方面让社区的规模难以扩大（虽然这在某些程度上可能是好事）。这些社区就算允许搜索引擎索引，大部分也通常不愿意出钱进行SEO优化，这让他们在大部分搜索引擎上只能排到第一页的末位甚至第二页的位置，而前几名就是使用模板化的开头</p>
+<h2 id="没有下限的内容农场"><a class="markdownIt-Anchor" href="#没有下限的内容农场"></a> 没有下限的内容农场</h2>
+<blockquote>
+<p>内容农场（Content Farm）是为赚取广告收益而不择手段的网站，他们会雇用写手或撰写程式四处抄袭、剪贴、拼凑出大量品质不稳定的网络文章。他们用耸动而失真的标题吸引点阅，同时以人工和机器堆砌热门关键词欺骗搜索引擎，久之搜寻结果前段塞满了他们的垃圾，真正相关资讯则被埋没。<br />
+内容农场对创作者有害，因为他们盗文、盗译、盗图、盗哏，且不附出处，使真正投注心力的原创者得不到应有报偿。<br />
+内容农场对读者有害，因为它们发布的内容粗制滥造、缺乏求证，甚至自行脑补、无中生有，内容错误也不负责，是谣言的大温床。<br />
+抵制内容农场的唯一做法是不阅读、不点连结、不点赞、不分享，不要让他们赚到广告收益、网站流量及搜索引擎排名。然而内容农场乍看之下往往不易辨识，有时难免点错，网页打开才发现中计。</p>
+</blockquote>
+<p>（从繁体中文翻译）</p>
+<p>二手搜索结果爬取站（如XX养生网、XX资料站），StackOverflow机翻站（如voidcn、codenong），“技术”内容互相转载站（如某专业IT技术博客）</p>
+<h2 id="使用搜索引擎还能获取什么"><a class="markdownIt-Anchor" href="#使用搜索引擎还能获取什么"></a> 使用搜索引擎还能获取什么</h2>
+<p>（等一下再写）</p>
+<h2 id="如何获取到想要的内容"><a class="markdownIt-Anchor" href="#如何获取到想要的内容"></a> 如何获取到想要的内容</h2>
+<ul>
+<li>尽量使用没有国家跳转(NCR, no contry redict)的搜索引擎选项，如https://www.google.com/ncr</li>
+<li>使用英文作为关键词搜索想要的内容，但是同时也要注意英文的某些网站也是钓鱼网站。（如果遇到<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="某些下载站除外，如upload.to" ontouchstart>连续弹窗让你允许通知的</span></span>，就直接离开吧~）</li>
+<li>如果看到标注了转载的内容，尽量到转载源去获取最开始的信息</li>
+<li>尽量使用下面的内容作为自己的信息来源：公开发表的论文、软件的官方文档、可信的问答平台的答案（需要自己筛选）</li>
+</ul>
+<p><a href="https://www.v2ex.com/t/595564" target="_blank" rel="noopener">https://www.v2ex.com/t/595564</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <p>
+                
+                
+              </p>
+              
+                <p class="note note-warning">这篇文章的作者是Shaloc, 转载请加上这个文章的永久链接</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/post/2020/">
+                        <i class="fa fa-chevron-left"></i>
+                        <span class="hidden-mobile">2020</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/post/codecraft-2020-phase-1/">
+                        <span class="hidden-mobile">关于CodeCraft2020热身赛的一点想法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="fa fa-chevron-right"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+              
+                <!-- Comments -->
+                <div class="comments" id="comments">
+                  
+                  
+  <script defer src="https://utteranc.es/client.js"
+          repo="Shaloc/review"
+          issue-term="pathname"
+  
+          label="utterances"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+  >
+  </script>
+
+
+                </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc-start"></div>
+<div id="toc">
+  <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"
+        ><b>Hexo</b></a
+      >
+      <i class="iconfont icon-love"></i>
+      <a
+        href="https://github.com/fluid-dev/hexo-theme-fluid"
+        target="_blank"
+        rel="nofollow noopener"
+      >
+        <b>Fluid</b></a
+      >
+      &nbsp;
+      <a
+        href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
+        ,
+        target="_blank"
+        >
+        <img src="img/upai.png" alt="" width="6%"> </a
+      >提供CDN服务
+    </div>
+    
+ 
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="https://cdn.staticfile.org/mdbootstrap/4.13.0/js/mdb.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var navHeight = $('#navbar').height();
+      var toc = $('#toc');
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+      var tocLimMax = 2 * boardTop + boardCtn.height();
+
+      $(window).scroll(function () {
+        var tocLimMin = $('#toc-start').offset().top - navHeight;
+        var scroH = document.body.scrollTop + document.documentElement.scrollTop;
+
+        if (tocLimMin <= scroH && scroH <= tocLimMax) {
+          toc.css({
+            'display': 'block',
+            'position': 'fixed',
+            'top': navHeight,
+          });
+        } else if (scroH <= tocLimMin) {
+          toc.css({
+            'position': '',
+            'top': '',
+          });
+        } else if (scroH > tocLimMax) {
+          toc.css('display', 'none');
+        }
+      });
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc > p').css('visibility', 'visible');
+      }
+      var offset = boardCtn.css('margin-right')
+      $('#toc-ctn').css({
+        'right': offset
+      })
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "为什么谷歌也得不到答案了&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 45,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script defer src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

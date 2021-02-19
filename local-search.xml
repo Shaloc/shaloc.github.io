@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>2020</title>
+    <link href="/post/2020/"/>
+    <url>/post/2020/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><p>最近一直换工作电脑，看来之后应该把写博客的环境容器化，这样换电脑就 docker pull 一下好了（逃</p><p>是非常迟到的年终总结！也想在这里稍微回忆一下人生的第二个十二年。</p><p>(还没写完)</p><h1 id="1"><a class="markdownIt-Anchor" href="#1"></a> 1</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>为什么谷歌也得不到答案了</title>
+    <link href="/post/chinese-internet-and-search-engine/"/>
+    <url>/post/chinese-internet-and-search-engine/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><p>本科时候的一个老师告诉我，不要用搜索引擎搜索直接遇到的问题以期得到解答，更多的时候要使用调试工具或者阅读文档自己寻找答案。三年后的现在，不使用一些技巧地使用搜索引擎真的无法获得很多问题的答案了（包括使用非中文搜索引擎搜索中文内容），中文互联网近些年来到底发生了什么？</p><h2 id="逐渐局域网化的内容产出地"><a class="markdownIt-Anchor" href="#逐渐局域网化的内容产出地"></a> 逐渐局域网化的内容产出地</h2><p>一些原创社区为了保护原创者们的权益，防止他们的文章被轻易地检索和盗用，将自己设置为拒绝外部搜索引擎检索，这本身可能没什么问题。但是问题是原创社区内的内容一样会被抄袭者改写、盗用，而这种封闭一方面增加了只会使用搜索引擎的人群找到文章真正的出处的难度，另一方面让社区的规模难以扩大（虽然这在某些程度上可能是好事）。这些社区就算允许搜索引擎索引，大部分也通常不愿意出钱进行SEO优化，这让他们在大部分搜索引擎上只能排到第一页的末位甚至第二页的位置，而前几名就是使用模板化的开头</p><h2 id="没有下限的内容农场"><a class="markdownIt-Anchor" href="#没有下限的内容农场"></a> 没有下限的内容农场</h2><blockquote><p>内容农场（Content Farm）是为赚取广告收益而不择手段的网站，他们会雇用写手或撰写程式四处抄袭、剪贴、拼凑出大量品质不稳定的网络文章。他们用耸动而失真的标题吸引点阅，同时以人工和机器堆砌热门关键词欺骗搜索引擎，久之搜寻结果前段塞满了他们的垃圾，真正相关资讯则被埋没。<br />内容农场对创作者有害，因为他们盗文、盗译、盗图、盗哏，且不附出处，使真正投注心力的原创者得不到应有报偿。<br />内容农场对读者有害，因为它们发布的内容粗制滥造、缺乏求证，甚至自行脑补、无中生有，内容错误也不负责，是谣言的大温床。<br />抵制内容农场的唯一做法是不阅读、不点连结、不点赞、不分享，不要让他们赚到广告收益、网站流量及搜索引擎排名。然而内容农场乍看之下往往不易辨识，有时难免点错，网页打开才发现中计。</p></blockquote><p>（从繁体中文翻译）</p><p>二手搜索结果爬取站（如XX养生网、XX资料站），StackOverflow机翻站（如voidcn、codenong），“技术”内容互相转载站（如某专业IT技术博客）</p><h2 id="使用搜索引擎还能获取什么"><a class="markdownIt-Anchor" href="#使用搜索引擎还能获取什么"></a> 使用搜索引擎还能获取什么</h2><p>（等一下再写）</p><h2 id="如何获取到想要的内容"><a class="markdownIt-Anchor" href="#如何获取到想要的内容"></a> 如何获取到想要的内容</h2><ul><li>尽量使用没有国家跳转(NCR, no contry redict)的搜索引擎选项，如https://www.google.com/ncr</li><li>使用英文作为关键词搜索想要的内容，但是同时也要注意英文的某些网站也是钓鱼网站。（如果遇到<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="某些下载站除外，如upload.to" ontouchstart>连续弹窗让你允许通知的</span></span>，就直接离开吧~）</li><li>如果看到标注了转载的内容，尽量到转载源去获取最开始的信息</li><li>尽量使用下面的内容作为自己的信息来源：公开发表的论文、软件的官方文档、可信的问答平台的答案（需要自己筛选）</li></ul><p><a href="https://www.v2ex.com/t/595564" target="_blank" rel="noopener">https://www.v2ex.com/t/595564</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于CodeCraft2020热身赛的一点想法</title>
     <link href="/post/codecraft-2020-phase-1/"/>
     <url>/post/codecraft-2020-phase-1/</url>
@@ -48,7 +74,7 @@
   
   
   <entry>
-    <title>&#39;shaloc.site&#39; has been HSTS preloaded</title>
+    <title>'shaloc.site' has been HSTS preloaded</title>
     <link href="/post/hsts/"/>
     <url>/post/hsts/</url>
     
@@ -333,7 +359,7 @@
   
   
   <entry>
-    <title>PlutoSDR&lt;1&gt; FM电台的GNU Radio实现(1)</title>
+    <title>PlutoSDR<1> FM电台的GNU Radio实现(1)</title>
     <link href="/post/PlutoSDR_2/"/>
     <url>/post/PlutoSDR_2/</url>
     
@@ -360,7 +386,7 @@
   
   
   <entry>
-    <title>PlutoSDR&lt;0&gt; 环境配置</title>
+    <title>PlutoSDR<0> 环境配置</title>
     <link href="/post/PlutoSDR_1/"/>
     <url>/post/PlutoSDR_1/</url>
     
